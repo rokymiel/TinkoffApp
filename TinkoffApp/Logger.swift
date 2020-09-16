@@ -28,7 +28,7 @@ class Logger {
     */
     static func logFunctionName(with message:String,functionName: String = #function) {
         #if DEBUG
-        print(message+":"+functionName)
+        print(message+" : "+functionName)
         #endif
     }
 }

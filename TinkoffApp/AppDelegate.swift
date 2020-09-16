@@ -18,30 +18,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
-
+    // MARK: Application Lifecycle
     func applicationDidFinishLaunching(_ application: UIApplication) {
         Logger.logFunctionName(from: "not running", to: "inactive")
     }
-    //3
     func applicationWillResignActive(_ application: UIApplication) {
          Logger.logFunctionName(from: "active", to: "inactive")
     }
-    //2
     func applicationDidBecomeActive(_ application: UIApplication) {
          Logger.logFunctionName(from: "inactive", to: "active")
     }
-    //5
     func applicationDidEnterBackground(_ application: UIApplication) {
          Logger.logFunctionName(from: "inactive", to: "background")
     }
-    //4
     func applicationWillEnterForeground(_ application: UIApplication) {
        Logger.logFunctionName(from: "background", to: "inactive")
     }
     func applicationWillTerminate(_ application: UIApplication) {
          Logger.logFunctionName(from: getState(application.applicationState), to: "terminated")
     }
+    /// Получение строкового представления состояния приложения
+    /// - parameter state: Состояние приложения
     func getState(_ state:UIApplication.State)->String{
         switch state {
         case .active:
@@ -54,9 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return "none"
         }
     }
-//    func logFunctionName(from:String,to:String,functionName: String = #function) {
-//        print("Application moved from \(from) to \(to): \(functionName)")
-//    }
 
 
 }
