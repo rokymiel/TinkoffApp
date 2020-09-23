@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7C919525193283003D479C /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C919425193283003D479C /* ProfileView.storyboard */; };
+		7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C9196251932D5003D479C /* ProfileViewController.swift */; };
 		7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */; };
 		7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD55D251124FB00C7EFE8 /* ViewController.swift */; };
 		7D9BD561251124FB00C7EFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD55F251124FB00C7EFE8 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D7C919425193283003D479C /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
+		7D7C9196251932D5003D479C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9BD55D251124FB00C7EFE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */,
 				7D9BD567251124FE00C7EFE8 /* Info.plist */,
 				7D9BD5912511367400C7EFE8 /* Logger.swift */,
+				7D7C919425193283003D479C /* ProfileView.storyboard */,
+				7D7C9196251932D5003D479C /* ProfileViewController.swift */,
 			);
 			path = TinkoffApp;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9BD566251124FE00C7EFE8 /* LaunchScreen.storyboard in Resources */,
+				7D7C919525193283003D479C /* ProfileView.storyboard in Resources */,
 				7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */,
 				7D9BD561251124FB00C7EFE8 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			files = (
 				7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */,
 				7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */,
+				7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */,
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TinkoffApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TinkoffApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
