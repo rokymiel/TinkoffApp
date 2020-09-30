@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D19304425234B7200227843 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304325234B7200227843 /* ConversationCellModel.swift */; };
+		7D19304725234C1700227843 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304625234C1700227843 /* ConfigurableView.swift */; };
+		7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304825234CB000227843 /* ConversationViewCell.swift */; };
+		7D19304B25234CB000227843 /* ConversationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D19304925234CB000227843 /* ConversationViewCell.xib */; };
+		7D19304E25235C4A00227843 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304D25235C4A00227843 /* ConversationsListViewController.swift */; };
+		7D1930552523A51D00227843 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1930532523A51D00227843 /* ConversationViewController.swift */; };
+		7D1930592523BDBC00227843 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1930572523BDBC00227843 /* ChatViewCell.swift */; };
+		7D19305A2523BDBC00227843 /* ChatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1930582523BDBC00227843 /* ChatViewCell.xib */; };
+		7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19305B2523BDE200227843 /* MessageCellModel.swift */; };
 		7D7C919525193283003D479C /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C919425193283003D479C /* ProfileView.storyboard */; };
 		7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C9196251932D5003D479C /* ProfileViewController.swift */; };
 		7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */; };
@@ -18,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D19304325234B7200227843 /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
+		7D19304625234C1700227843 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		7D19304825234CB000227843 /* ConversationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewCell.swift; sourceTree = "<group>"; };
+		7D19304925234CB000227843 /* ConversationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationViewCell.xib; sourceTree = "<group>"; };
+		7D19304D25235C4A00227843 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		7D1930532523A51D00227843 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		7D1930572523BDBC00227843 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
+		7D1930582523BDBC00227843 /* ChatViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewCell.xib; sourceTree = "<group>"; };
+		7D19305B2523BDE200227843 /* MessageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
 		7D7C919425193283003D479C /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 		7D7C9196251932D5003D479C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +59,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D19304225234B4A00227843 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304325234B7200227843 /* ConversationCellModel.swift */,
+				7D19305B2523BDE200227843 /* MessageCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D19304525234BFF00227843 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304625234C1700227843 /* ConfigurableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7D19304C252350FF00227843 /* CustonUI */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304825234CB000227843 /* ConversationViewCell.swift */,
+				7D19304925234CB000227843 /* ConversationViewCell.xib */,
+				7D1930572523BDBC00227843 /* ChatViewCell.swift */,
+				7D1930582523BDBC00227843 /* ChatViewCell.xib */,
+			);
+			path = CustonUI;
+			sourceTree = "<group>";
+		};
+		7D19305E252502F600227843 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D9BD55D251124FB00C7EFE8 /* ViewController.swift */,
+				7D9BD55F251124FB00C7EFE8 /* Main.storyboard */,
+				7D7C919425193283003D479C /* ProfileView.storyboard */,
+				7D7C9196251932D5003D479C /* ProfileViewController.swift */,
+				7D19304D25235C4A00227843 /* ConversationsListViewController.swift */,
+				7D1930532523A51D00227843 /* ConversationViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7D9BD54D251124FB00C7EFE8 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +119,15 @@
 		7D9BD558251124FB00C7EFE8 /* TinkoffApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D19305E252502F600227843 /* ViewControllers */,
+				7D19304525234BFF00227843 /* Protocols */,
+				7D19304225234B4A00227843 /* Models */,
 				7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */,
-				7D9BD55D251124FB00C7EFE8 /* ViewController.swift */,
-				7D9BD55F251124FB00C7EFE8 /* Main.storyboard */,
 				7D9BD562251124FE00C7EFE8 /* Assets.xcassets */,
 				7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */,
 				7D9BD567251124FE00C7EFE8 /* Info.plist */,
 				7D9BD5912511367400C7EFE8 /* Logger.swift */,
-				7D7C919425193283003D479C /* ProfileView.storyboard */,
-				7D7C9196251932D5003D479C /* ProfileViewController.swift */,
+				7D19304C252350FF00227843 /* CustonUI */,
 			);
 			path = TinkoffApp;
 			sourceTree = "<group>";
@@ -131,7 +190,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D19304B25234CB000227843 /* ConversationViewCell.xib in Resources */,
 				7D9BD566251124FE00C7EFE8 /* LaunchScreen.storyboard in Resources */,
+				7D19305A2523BDBC00227843 /* ChatViewCell.xib in Resources */,
 				7D7C919525193283003D479C /* ProfileView.storyboard in Resources */,
 				7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */,
 				7D9BD561251124FB00C7EFE8 /* Main.storyboard in Resources */,
@@ -146,9 +207,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */,
+				7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */,
+				7D19304E25235C4A00227843 /* ConversationsListViewController.swift in Sources */,
+				7D1930552523A51D00227843 /* ConversationViewController.swift in Sources */,
 				7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */,
+				7D19304425234B7200227843 /* ConversationCellModel.swift in Sources */,
+				7D19304725234C1700227843 /* ConfigurableView.swift in Sources */,
+				7D1930592523BDBC00227843 /* ChatViewCell.swift in Sources */,
 				7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */,
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
+				7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
