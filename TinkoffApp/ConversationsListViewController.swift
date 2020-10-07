@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ConversationsListViewController: UITableViewController {
-
+class ConversationsListViewController: UITableViewController, ThemesPickerDelegate {
+    
     @IBOutlet var chatList: UITableView!
     
     @IBOutlet weak var profileView: UIView!
@@ -23,7 +23,33 @@ class ConversationsListViewController: UITableViewController {
         
         chatList.dataSource=self
         chatList.delegate=self
+        setColors()
     }
+    func applyTheme() {
+        setColors()
+        chatList.reloadData()
+    }
+    func setColors(){
+        view.backgroundColor = ThemeManager.currentTheme().mainColor
+        if #available(iOS 13.0, *) {
+            let appearanceNavBar = UINavigationBarAppearance()
+            appearanceNavBar.backgroundColor = ThemeManager.currentTheme().mainColor
+            appearanceNavBar.titleTextAttributes = [.foregroundColor:ThemeManager.currentTheme().textColor]
+            appearanceNavBar.largeTitleTextAttributes = [.foregroundColor:ThemeManager.currentTheme().textColor]
+            navigationController?.navigationBar.standardAppearance = appearanceNavBar
+            
+            navigationController?.navigationBar.scrollEdgeAppearance = appearanceNavBar
+            
+            navigationController?.navigationBar.compactAppearance = appearanceNavBar
+            
+        } else {
+            // Fallback on earlier versions
+            navigationController?.navigationBar.barTintColor = ThemeManager.currentTheme().textColor
+            navigationController?.navigationBar.backgroundColor = ThemeManager.currentTheme().mainColor
+        }
+        
+    }
+    
     // MARK: - Messages
     func createMessages(){
         
@@ -52,7 +78,9 @@ class ConversationsListViewController: UITableViewController {
             if item.isOnline{
                 groupedMessages[0].messages.append(item)
             }else{
-                groupedMessages[1].messages.append(item)
+                if(!item.message.isEmpty){
+                    groupedMessages[1].messages.append(item)
+                }
             }
         }
     }
@@ -65,43 +93,53 @@ class ConversationsListViewController: UITableViewController {
         return groupedMessages[section].messages.count
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection
-                                section: Int) -> String? {
+        section: Int) -> String? {
         return groupedMessages[section].status
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let item = groupedMessages[indexPath.section].messages[indexPath.row]
-        if !item.isOnline&&item.message.isEmpty{
-            return 0.0
-        }
-        
-        return super.tableView(tableView, heightForRowAt: indexPath)
-    }
+    //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        let item = groupedMessages[indexPath.section].messages[indexPath.row]
+    //        if !item.isOnline&&item.message.isEmpty{
+    //            return 0.0
+    //        }
+    //
+    //        return super.tableView(tableView, heightForRowAt: indexPath)
+    //    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = groupedMessages[indexPath.section].messages[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:ConversationViewCell.self), for: indexPath) as? ConversationViewCell{
             cell.configure(with: item)
-            if !item.isOnline&&item.message.isEmpty{
-                cell.isHidden = true
-            } else{
-                cell.isHidden=false
-            }
+            //            if !item.isOnline&&item.message.isEmpty{
+            //                cell.isHidden = true
+            //            } else{
+            //                cell.isHidden=false
+            //            }
+            cell.applyTheme()
             return cell
         }
         return UITableViewCell()
         
     }
-
+    
     // MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedChat = groupedMessages[indexPath.section].messages[indexPath.row]
-         performSegue(withIdentifier: "toChat", sender: nil)
+        performSegue(withIdentifier: "toChat", sender: nil)
         
     }
     var selectedChat:ConversationCellModel!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ConversationViewController {
             destination.conversation = selectedChat
+        }
+        if let destination = segue.destination as? ThemesViewController {
+            destination.themeDelegate = self
+            destination.themeHandler = {
+                [weak self] in
+                self?.setColors()
+                self?.chatList.reloadData()
+                
+            }
         }
     }
 }

@@ -26,6 +26,8 @@
 	<string>Main</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app will use camera</string>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>You can select photo</string>
 	<key>UIRequiredDeviceCapabilities</key>
