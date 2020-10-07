@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-hg-SkG">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-hg-SkG">
                                 <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem style="plain" id="BJW-fV-3D6">
-                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="QRJ-nS-tU6">
+                                    <barButtonItem style="plain" id="hY6-nb-wbC">
+                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ce6-Bm-wxc">
                                             <rect key="frame" x="16" y="10" width="343" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -29,14 +29,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-2f-S9Y">
-                                <rect key="frame" x="0.0" y="88" width="375" height="646"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-2f-S9Y">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GgX-hg-SkG" firstAttribute="top" secondItem="3R7-2f-S9Y" secondAttribute="bottom" constant="-5" id="6Th-DP-fCF"/>
+                            <constraint firstItem="GgX-hg-SkG" firstAttribute="top" secondItem="3R7-2f-S9Y" secondAttribute="bottom" id="6Th-DP-fCF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GgX-hg-SkG" secondAttribute="trailing" id="FKT-ks-BiP"/>
                             <constraint firstItem="3R7-2f-S9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LO4-8p-pQN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GgX-hg-SkG" secondAttribute="bottom" id="Nsc-Fe-P9Z"/>
@@ -49,6 +49,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="R1C-Wx-PTb"/>
                     <connections>
                         <outlet property="chatView" destination="3R7-2f-S9Y" id="fMA-PG-TZQ"/>
+                        <outlet property="messageBar" destination="GgX-hg-SkG" id="Ffe-WG-RqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,15 +63,21 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3yb-PB-4ou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="36B-Mg-q34" id="0rC-oN-NLN"/>
                             <outlet property="delegate" destination="36B-Mg-q34" id="gep-ex-WaB"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="hvW-6u-qcU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="gear_ico" id="aAn-KK-Dxp">
+                            <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="yfq-HD-RS4" kind="show" id="v5h-Ih-epZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="sCq-gl-b3r">
-                            <view key="customView" contentMode="scaleToFill" id="nyI-1d-0jF">
+                            <view key="customView" contentMode="scaleToFill" ambiguous="YES" id="nyI-1d-0jF">
                                 <rect key="frame" x="314" y="0.0" width="45" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -119,6 +126,16 @@
             </objects>
             <point key="canvasLocation" x="612" y="273.39901477832512"/>
         </scene>
+        <!--ThemesView-->
+        <scene sceneID="XAs-Pm-tcN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ThemesView" referencedIdentifier="ThemesView" id="yfq-HD-RS4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Z5-vU-Kew"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gax-xi-wB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="-199"/>
+        </scene>
         <!--ProfileView-->
         <scene sceneID="aUI-HN-FZD">
             <objects>
@@ -144,4 +161,7 @@
             <point key="canvasLocation" x="-390" y="275"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear_ico" width="19" height="19"/>
+    </resources>
 </document>

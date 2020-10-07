@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var saveButton: UIButton!
@@ -70,6 +72,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
     }
     
+    @IBAction func closeView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         //logSaveButton()
@@ -89,8 +94,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         image.layer.cornerRadius=image.layer.bounds.height/2
         saveButton.layer.cornerRadius=(14/40)*saveButton.layer.bounds.height
         imagePicker.delegate = self
+        setColors()
         
         
+    }
+    func setColors(){
+        
+        view.backgroundColor=ThemeManager.currentTheme().mainColor
+        userNameLabel.textColor = ThemeManager.currentTheme().textColor
+        descriptionLabel.textColor = ThemeManager.currentTheme().textColor
     }
     func logSaveButton()  {
         NSLog("\(saveButton.frame)")

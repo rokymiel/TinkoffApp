@@ -14,8 +14,13 @@ class ConversationViewCell: UITableViewCell,ConfigurableView {
     
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var onlineLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    func applyTheme(){
+        backgroundColor = ThemeManager.currentTheme().mainColor
+        messageLabel.textColor = ThemeManager.currentTheme().textColor
+        userNameLabel.textColor = ThemeManager.currentTheme().textColor
+    }
     func configure(with model: ConfigurableType) {
         userNameLabel.text=model.name
         
@@ -32,6 +37,7 @@ class ConversationViewCell: UITableViewCell,ConfigurableView {
             messageLabel.attributedText = NSMutableAttributedString(string:model.message, attributes:attrs)
 
         } else{
+            messageLabel.font = UIFont(name: "System", size: messageLabel.font.pointSize)
             messageLabel.text=model.message
         }
         
@@ -42,13 +48,10 @@ class ConversationViewCell: UITableViewCell,ConfigurableView {
         }
         
         if model.isOnline {
-            backgroundColor =  #colorLiteral(red: 1, green: 0.8588235294, blue: 0.5450980392, alpha: 1)
+            onlineLabel.isHidden=false
         }
         else{
-            backgroundColor = .white
-            if model.message.isEmpty{
-                
-            }
+            onlineLabel.isHidden = true
         }
     }
 

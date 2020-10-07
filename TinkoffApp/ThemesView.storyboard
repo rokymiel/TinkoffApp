@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXv-gi-KP0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="8Gc-ue-1gP">
+            <objects>
+                <viewController storyboardIdentifier="ThemesView" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VXv-gi-KP0" customClass="ThemesViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5F-od-owe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-Wc-7Sg">
+                                <rect key="frame" x="60" y="235" width="294" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4ks-BL-4Bz"/>
+                                </constraints>
+                                <state key="normal" image="classicThemeBack"/>
+                                <connections>
+                                    <action selector="classicViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="fgY-D9-YMA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bb-sg-Vbt">
+                                <rect key="frame" x="60" y="357" width="294" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fLt-Fa-pgQ"/>
+                                </constraints>
+                                <state key="normal" image="dayThemeBack"/>
+                                <connections>
+                                    <action selector="dayViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="hf3-YX-O0I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-Dq-ump">
+                                <rect key="frame" x="178" y="303" width="58" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="NjT-4r-sMc"/>
+                                    <constraint firstAttribute="height" constant="34" id="Ra6-u0-fgt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Classic">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="classicViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="4zN-R5-BAX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-L1-Rx9">
+                                <rect key="frame" x="178" y="425" width="58" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="mtD-xg-K6Z"/>
+                                    <constraint firstAttribute="width" constant="58" id="tFh-jB-fBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Day">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dayViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="3yb-qL-QCM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-4N-Aaf">
+                                <rect key="frame" x="60" y="479" width="294" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2ez-kC-xJZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="vks-Ne-m0X"/>
+                                </constraints>
+                                <state key="normal" image="nightThemeBack"/>
+                                <connections>
+                                    <action selector="nightViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="tai-Es-cim"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwV-cy-bfR">
+                                <rect key="frame" x="178" y="547" width="58" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EVW-KW-Cmu"/>
+                                    <constraint firstAttribute="width" constant="58" id="kwk-c8-Ckw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Night">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nightViewClicked:" destination="VXv-gi-KP0" eventType="touchUpInside" id="TdX-vy-dhZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1533293426" green="0.28055655959999998" blue="0.38826191430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2Bb-sg-Vbt" firstAttribute="centerY" secondItem="9uY-GF-hDw" secondAttribute="centerY" id="51U-af-sEB"/>
+                            <constraint firstItem="IQ4-4N-Aaf" firstAttribute="leading" secondItem="9uY-GF-hDw" secondAttribute="leading" constant="60" id="595-a0-WDW"/>
+                            <constraint firstItem="9uY-GF-hDw" firstAttribute="trailing" secondItem="Rjh-Wc-7Sg" secondAttribute="trailing" constant="60" id="5Th-WJ-Cvo"/>
+                            <constraint firstItem="ekK-L1-Rx9" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="DIs-eG-Rf7"/>
+                            <constraint firstItem="GwV-cy-bfR" firstAttribute="top" secondItem="IQ4-4N-Aaf" secondAttribute="bottom" constant="8" id="DYn-VI-MCT"/>
+                            <constraint firstItem="YLn-Dq-ump" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="Igm-gw-Y2m"/>
+                            <constraint firstItem="9uY-GF-hDw" firstAttribute="trailing" secondItem="IQ4-4N-Aaf" secondAttribute="trailing" constant="60" id="N8M-PY-C8x"/>
+                            <constraint firstItem="GwV-cy-bfR" firstAttribute="top" secondItem="IQ4-4N-Aaf" secondAttribute="bottom" constant="8" id="OuB-9T-BSm"/>
+                            <constraint firstItem="YLn-Dq-ump" firstAttribute="top" secondItem="Rjh-Wc-7Sg" secondAttribute="bottom" constant="8" id="S3X-5F-xiK"/>
+                            <constraint firstItem="9uY-GF-hDw" firstAttribute="trailing" secondItem="2Bb-sg-Vbt" secondAttribute="trailing" constant="60" id="Unl-Ja-Eij"/>
+                            <constraint firstItem="IQ4-4N-Aaf" firstAttribute="top" secondItem="ekK-L1-Rx9" secondAttribute="bottom" constant="20" id="V2w-If-hp0"/>
+                            <constraint firstItem="2Bb-sg-Vbt" firstAttribute="top" secondItem="YLn-Dq-ump" secondAttribute="bottom" constant="20" id="cPU-P0-ejL"/>
+                            <constraint firstItem="GwV-cy-bfR" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="dM0-P9-PWU"/>
+                            <constraint firstItem="ekK-L1-Rx9" firstAttribute="top" secondItem="2Bb-sg-Vbt" secondAttribute="bottom" constant="8" id="dm8-iF-BT6"/>
+                            <constraint firstItem="IQ4-4N-Aaf" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="eS1-1a-JPu"/>
+                            <constraint firstItem="Rjh-Wc-7Sg" firstAttribute="leading" secondItem="9uY-GF-hDw" secondAttribute="leading" constant="60" id="h0E-Vf-9oD"/>
+                            <constraint firstItem="2Bb-sg-Vbt" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="hIq-Mc-yUl"/>
+                            <constraint firstItem="2Bb-sg-Vbt" firstAttribute="leading" secondItem="9uY-GF-hDw" secondAttribute="leading" constant="60" id="nkQ-Ln-PjG"/>
+                            <constraint firstItem="Rjh-Wc-7Sg" firstAttribute="centerX" secondItem="9uY-GF-hDw" secondAttribute="centerX" id="sg5-VD-kNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9uY-GF-hDw"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="classicThemeView" destination="Rjh-Wc-7Sg" id="coD-w5-ppA"/>
+                        <outlet property="dayThemeView" destination="2Bb-sg-Vbt" id="qfu-RO-fXy"/>
+                        <outlet property="nightThemeView" destination="IQ4-4N-Aaf" id="4wJ-Nu-i4D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zv-fs-n7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.42028985507247" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="classicThemeBack" width="300" height="57"/>
+        <image name="dayThemeBack" width="300" height="57"/>
+        <image name="nightThemeBack" width="300" height="57"/>
+    </resources>
+</document>
