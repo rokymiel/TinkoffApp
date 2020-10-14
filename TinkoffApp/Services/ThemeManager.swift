@@ -8,21 +8,37 @@
 import UIKit
 import Foundation
 class ThemeManager{
+    
+    // MARK: GCD write and read methods
+    private static let manager = GCDDataManager()
     static func apply(theme:Theme){
-        UserDefaults.standard.set(theme.rawValue, forKey: selectedThemeKey)
-        UserDefaults.standard.synchronize()
+        manager.writeTheme(theme: theme, fileName: selectedThemeKey+".txt")
         current = theme
         
     }
+    private static func setTheme(){
+        current = manager.readTheme(fileName: selectedThemeKey+".txt")
+    }
+    
+    // Мне здесь польше нравится через UserDefaults так как сохранение выбранное темы это не что-то тяжелое
+    // Следовательно здесь можно и синхронно выполнять, так как это сильно не повлияет
+    
+    // MARK: UserDefaults methods
+    //    static func apply(theme:Theme){
+    //        UserDefaults.standard.set(theme.rawValue, forKey: selectedThemeKey)
+    //        current = theme
+    //
+    //    }
+    //    private static func setTheme(){
+    //        if let storedTheme = UserDefaults.standard.value(forKey: selectedThemeKey) as? Int{
+    //            current = Theme(rawValue: storedTheme) ?? .classic
+    //        } else {
+    //            current = .classic
+    //        }
+    //    }
     static let selectedThemeKey="SelectedThemeKey"
     private static var current:Theme? = nil
-    private static func setTheme(){
-        if let storedTheme = UserDefaults.standard.value(forKey: selectedThemeKey) as? Int{
-            current = Theme(rawValue: storedTheme) ?? .classic
-        } else {
-            current = .classic
-        }
-    }
+    
     static func currentTheme() -> Theme {
         if let theme = current {
             return theme
