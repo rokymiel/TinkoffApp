@@ -24,6 +24,9 @@
 		7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD562251124FE00C7EFE8 /* Assets.xcassets */; };
 		7D9BD566251124FE00C7EFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */; };
 		7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD5912511367400C7EFE8 /* Logger.swift */; };
+		7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A32536375900B0F078 /* GCDDataManager.swift */; };
+		7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A52536376900B0F078 /* OperationDataManager.swift */; };
+		7DA599A82537583200B0F078 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A72537583200B0F078 /* DataManager.swift */; };
 		7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D74252D0FF500DE922A /* ThemesViewController.swift */; };
 		7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB00D78252D105400DE922A /* ThemesView.storyboard */; };
 		7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */; };
@@ -50,6 +53,9 @@
 		7D9BD565251124FE00C7EFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9BD567251124FE00C7EFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D9BD5912511367400C7EFE8 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7DA599A32536375900B0F078 /* GCDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDDataManager.swift; sourceTree = "<group>"; };
+		7DA599A52536376900B0F078 /* OperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
+		7DA599A72537583200B0F078 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7DB00D74252D0FF500DE922A /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		7DB00D78252D105400DE922A /* ThemesView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThemesView.storyboard; sourceTree = "<group>"; };
 		7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPickerDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				7DB00D7D252D8B1100DE922A /* ThemeManager.swift */,
+				7DA599A32536375900B0F078 /* GCDDataManager.swift */,
+				7DA599A52536376900B0F078 /* OperationDataManager.swift */,
+				7DA599A72537583200B0F078 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,9 +245,12 @@
 				7D19304425234B7200227843 /* ConversationCellModel.swift in Sources */,
 				7D19304725234C1700227843 /* ConfigurableView.swift in Sources */,
 				7D1930592523BDBC00227843 /* ChatViewCell.swift in Sources */,
+				7DA599A82537583200B0F078 /* DataManager.swift in Sources */,
 				7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */,
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
+				7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */,
 				7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */,
+				7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */,
 				7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */,
 				7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */,
 			);
