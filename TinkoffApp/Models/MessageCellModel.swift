@@ -7,14 +7,27 @@
 //
 
 import Foundation
-struct MessageCellModel{
-    let message:String
+struct MessageCellModel {
+    let message: String
 }
 struct Message {
-    let message:String
-    let type:MessageType
-    enum MessageType{
-        case input
-        case output
-    }
+//    let message: String
+//    let type: MessageType
+//    enum MessageType {
+//        case input
+//        case output
+//    }
+    
+    let content: String
+    let created: Date
+    let senderId: String
+    let senderName: String
+    
+}
+
+struct Channel {
+    let identifier: String
+    let name: String
+    let lastMessage: String?
+    let lastActivity: Date?
 }

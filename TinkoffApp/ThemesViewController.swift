@@ -20,18 +20,18 @@ class ThemesViewController: UIViewController {
     @IBOutlet weak var classicThemeView: UIButton!
     @IBOutlet weak var dayThemeView: UIButton!
     @IBOutlet weak var nightThemeView: UIButton!
-    var themeHandler:ThemeChangedHandler?
+    var themeHandler: ThemeChangedHandler?
     var themeDelegate: ThemesPickerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never;
+        navigationItem.largeTitleDisplayMode = .never
         
-        classicThemeView.layer.cornerRadius=15
+        classicThemeView.layer.cornerRadius = 15
         classicThemeView.layer.borderColor = UIColor.systemBlue.cgColor
-        dayThemeView.layer.cornerRadius=15
+        dayThemeView.layer.cornerRadius = 15
         dayThemeView.layer.borderColor = UIColor.systemBlue.cgColor
-        nightThemeView.layer.cornerRadius=15
+        nightThemeView.layer.cornerRadius = 15
         nightThemeView.layer.borderColor = UIColor.systemBlue.cgColor
         switch ThemeManager.currentTheme() {
         case .classic:
@@ -50,10 +50,10 @@ class ThemesViewController: UIViewController {
         //themeDelegate?.applyTheme()
         themeHandler?()
     }
-    func classicTheme(){
-        classicThemeView.layer.borderWidth=5
-        dayThemeView.layer.borderWidth=0
-        nightThemeView.layer.borderWidth=0
+    func classicTheme() {
+        classicThemeView.layer.borderWidth = 5
+        dayThemeView.layer.borderWidth = 0
+        nightThemeView.layer.borderWidth = 0
         view.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
     }
     
@@ -64,9 +64,9 @@ class ThemesViewController: UIViewController {
         themeHandler?()
     }
     func dayTheme() {
-        classicThemeView.layer.borderWidth=0
-        dayThemeView.layer.borderWidth=5
-        nightThemeView.layer.borderWidth=0
+        classicThemeView.layer.borderWidth = 0
+        dayThemeView.layer.borderWidth = 5
+        nightThemeView.layer.borderWidth = 0
         view.backgroundColor = .lightGray
     }
     @IBAction func nightViewClicked(_ sender: Any) {
@@ -75,13 +75,10 @@ class ThemesViewController: UIViewController {
         //themeDelegate?.applyTheme()
         themeHandler?()
     }
-    func nightTheme(){
-        classicThemeView.layer.borderWidth=0
-        dayThemeView.layer.borderWidth=0
-        nightThemeView.layer.borderWidth=5
+    func nightTheme() {
+        classicThemeView.layer.borderWidth = 0
+        dayThemeView.layer.borderWidth = 0
+        nightThemeView.layer.borderWidth = 5
         view.backgroundColor = .black
     }
-    
-
-    
 }
