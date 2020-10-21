@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prs-fC-lQN">
-                        <rect key="frame" x="8" y="16" width="66" height="115"/>
+                        <rect key="frame" x="8" y="24" width="66" height="107"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-F1-ymQ">
-                                <rect key="frame" x="12" y="12" width="42" height="91"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-F1-ymQ">
+                                <rect key="frame" x="12" y="12" width="42" height="83"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,12 +54,23 @@
                             <constraint firstAttribute="trailing" secondItem="b3t-Vi-bXL" secondAttribute="trailing" constant="12" id="u8x-ga-EJq"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Олег Тиньков" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-u3-2nS">
+                        <rect key="frame" x="16" y="8" width="80" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="AJ0-hN-jsq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="CNO-Tr-fXT" secondAttribute="bottom" constant="16" id="1KM-pq-zj4"/>
-                    <constraint firstItem="prs-fC-lQN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1r8-19-5n4"/>
+                    <constraint firstItem="prs-fC-lQN" firstAttribute="top" secondItem="ZnC-u3-2nS" secondAttribute="bottom" constant="4" id="1r8-19-5n4"/>
                     <constraint firstItem="prs-fC-lQN" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.75" id="1vU-XU-QHP"/>
                     <constraint firstItem="CNO-Tr-fXT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Apr-6X-CPG"/>
+                    <constraint firstItem="ZnC-u3-2nS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="C48-A4-7Vw"/>
+                    <constraint firstItem="ZnC-u3-2nS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PSG-hI-oHI"/>
                     <constraint firstItem="prs-fC-lQN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="We8-El-0ly"/>
                     <constraint firstAttribute="bottom" secondItem="prs-fC-lQN" secondAttribute="bottom" constant="16" id="bZ8-jt-eZi"/>
                     <constraint firstAttribute="trailing" secondItem="CNO-Tr-fXT" secondAttribute="trailing" constant="8" id="hf8-wQ-Cq9"/>
@@ -70,8 +81,10 @@
             <connections>
                 <outlet property="inputMessageLabel" destination="fDx-F1-ymQ" id="h0R-Ce-JOH"/>
                 <outlet property="inputMessageView" destination="prs-fC-lQN" id="8Ox-g8-2Mb"/>
+                <outlet property="inputUsername" destination="ZnC-u3-2nS" id="CQ5-TV-6f1"/>
                 <outlet property="outputMessageLabel" destination="b3t-Vi-bXL" id="nnR-SO-ZrK"/>
                 <outlet property="outputMessageView" destination="CNO-Tr-fXT" id="0Br-hd-cdc"/>
+                <outlet property="senderNameLabel" destination="ZnC-u3-2nS" id="l6W-6G-cjo"/>
             </connections>
             <point key="canvasLocation" x="121.0144927536232" y="150.33482142857142"/>
         </tableViewCell>

@@ -15,7 +15,7 @@ class Logger {
                 - from: переход из данного состояния
                 - to: переход в данное состояние
     */
-    static func logFunctionName(from:String,to:String,functionName: String = #function) {
+    static func logFunctionName(from: String, to: String, functionName: String = #function) {
         #if DEBUG
         print("Application moved from \(from) to \(to): \(functionName)")
         #endif
@@ -26,7 +26,7 @@ class Logger {
             - with : сообщение для вывода
             - functionName: имя функции
     */
-    static func logFunctionName(with message:String,functionName: String = #function) {
+    static func logFunctionName(with message: String, functionName: String = #function) {
         #if DEBUG
         print(message+" : "+functionName)
         #endif

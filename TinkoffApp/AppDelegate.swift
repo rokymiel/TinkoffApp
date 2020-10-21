@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        UserIDManager.loadId()
         return true
     }
 
@@ -39,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     /// Получение строкового представления состояния приложения
     /// - parameter state: Состояние приложения
-    func getState(_ state:UIApplication.State)->String{
+    func getState(_ state: UIApplication.State) -> String {
         switch state {
         case .active:
             return "active"
@@ -52,6 +54,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-
 }
-
