@@ -82,12 +82,12 @@ class ConversationViewController: UIViewController {
                 let created = data["created"] as? Timestamp,
                 let content = data["content"] as? String,
                 let senderId = data["senderId"] as? String, !content.isEmpty {
-                
-                messages.append(.init(content: content, created: created.dateValue(), senderId: senderId, senderName: senderName))
+                messages.append(.init(messageId: document.documentID, content: content, created: created.dateValue(), senderId: senderId, senderName: senderName))
             }
-            messages.sort(by: {$0.created.compare($1.created) == .orderedAscending})
             
         }
+        messages.sort(by: {$0.created.compare($1.created) == .orderedAscending})
+        CoreDataManager.save(messages: messages)
     }
     @IBAction func sendNewMessage(_ sender: Any) {
         if let message = newMessageField.text, !message.isEmpty, let userId = UserIDManager.userId {

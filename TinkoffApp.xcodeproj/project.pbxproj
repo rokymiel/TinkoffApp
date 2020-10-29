@@ -16,6 +16,11 @@
 		7D1930592523BDBC00227843 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1930572523BDBC00227843 /* ChatViewCell.swift */; };
 		7D19305A2523BDBC00227843 /* ChatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1930582523BDBC00227843 /* ChatViewCell.xib */; };
 		7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19305B2523BDE200227843 /* MessageCellModel.swift */; };
+		7D592B702549B36B008B90EC /* Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B6E2549B36B008B90EC /* Chat.xcdatamodeld */; };
+		7D592B722549B986008B90EC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B712549B986008B90EC /* CoreDataStack.swift */; };
+		7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B732549C242008B90EC /* ObjectsExtensions.swift */; };
+		7D592B76254A0D42008B90EC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B75254A0D42008B90EC /* CoreDataManager.swift */; };
+		7D592B78254B156C008B90EC /* CoreDataStackAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B77254B156C008B90EC /* CoreDataStackAsync.swift */; };
 		7D755F01253F921A009282BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D755F00253F921A009282BD /* GoogleService-Info.plist */; };
 		7D755F0325409C1C009282BD /* UserIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D755F0225409C1C009282BD /* UserIDManager.swift */; };
 		7D7C919525193283003D479C /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C919425193283003D479C /* ProfileView.storyboard */; };
@@ -47,6 +52,11 @@
 		7D1930572523BDBC00227843 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
 		7D1930582523BDBC00227843 /* ChatViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewCell.xib; sourceTree = "<group>"; };
 		7D19305B2523BDE200227843 /* MessageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
+		7D592B6F2549B36B008B90EC /* Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chat.xcdatamodel; sourceTree = "<group>"; };
+		7D592B712549B986008B90EC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7D592B732549C242008B90EC /* ObjectsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsExtensions.swift; sourceTree = "<group>"; };
+		7D592B75254A0D42008B90EC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7D592B77254B156C008B90EC /* CoreDataStackAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackAsync.swift; sourceTree = "<group>"; };
 		7D755F00253F921A009282BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7D755F0225409C1C009282BD /* UserIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManager.swift; sourceTree = "<group>"; };
 		7D7C919425193283003D479C /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
@@ -135,6 +145,17 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		7D592B6D2549B353008B90EC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7D592B6E2549B36B008B90EC /* Chat.xcdatamodeld */,
+				7D592B712549B986008B90EC /* CoreDataStack.swift */,
+				7D592B732549C242008B90EC /* ObjectsExtensions.swift */,
+				7D592B77254B156C008B90EC /* CoreDataStackAsync.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		7D9BD54D251124FB00C7EFE8 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +177,7 @@
 		7D9BD558251124FB00C7EFE8 /* TinkoffApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D592B6D2549B353008B90EC /* CoreData */,
 				7D755F00253F921A009282BD /* GoogleService-Info.plist */,
 				7DB00D7C252D8AEB00DE922A /* Services */,
 				7D19305E252502F600227843 /* ViewControllers */,
@@ -179,6 +201,7 @@
 				7DA599A52536376900B0F078 /* OperationDataManager.swift */,
 				7DA599A72537583200B0F078 /* DataManager.swift */,
 				7D755F0225409C1C009282BD /* UserIDManager.swift */,
+				7D592B75254A0D42008B90EC /* CoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -329,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D592B78254B156C008B90EC /* CoreDataStackAsync.swift in Sources */,
 				7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */,
 				7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */,
 				7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */,
@@ -338,12 +362,16 @@
 				7D19304425234B7200227843 /* ConversationCellModel.swift in Sources */,
 				7D19304725234C1700227843 /* ConfigurableView.swift in Sources */,
 				7D1930592523BDBC00227843 /* ChatViewCell.swift in Sources */,
+				7D592B702549B36B008B90EC /* Chat.xcdatamodeld in Sources */,
+				7D592B76254A0D42008B90EC /* CoreDataManager.swift in Sources */,
 				7DA599A82537583200B0F078 /* DataManager.swift in Sources */,
 				7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */,
 				7D755F0325409C1C009282BD /* UserIDManager.swift in Sources */,
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
 				7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */,
+				7D592B722549B986008B90EC /* CoreDataStack.swift in Sources */,
 				7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */,
+				7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */,
 				7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */,
 				7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */,
 				7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */,
@@ -548,6 +576,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D592B6E2549B36B008B90EC /* Chat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D592B6F2549B36B008B90EC /* Chat.xcdatamodel */,
+			);
+			currentVersion = 7D592B6F2549B36B008B90EC /* Chat.xcdatamodel */;
+			path = Chat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7D9BD54E251124FB00C7EFE8 /* Project object */;
 }

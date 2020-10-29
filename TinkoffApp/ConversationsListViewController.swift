@@ -68,10 +68,12 @@ class ConversationsListViewController: UITableViewController, ThemesPickerDelega
                 let lastMessage = data["lastMessage"] as? String
                 let lastActivity = (data["lastActivity"] as? Timestamp)?.dateValue()
                 channels.append(Channel(identifier: document.documentID, name: name, lastMessage: lastMessage, lastActivity: lastActivity))
-                
             }
         }
+        CoreDataManager.save(channels: channels)
+        
     }
+    var coreDataStack = CoreDataStack()
     @IBAction func addNewChennel(_ sender: Any) {
         let alert = UIAlertController(title: "Новый канал", message: "Введите название нового канала", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
