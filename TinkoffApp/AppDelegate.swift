@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         UserIDManager.loadId()
+        // Читаем все сохраненные данные
+        CoreDataManager.readAllData()
         return true
     }
 

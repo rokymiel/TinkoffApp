@@ -20,6 +20,5 @@ class UserIDManager {
         } else {
             userId = id
         }
-        //let identifier = UUID()
     }
 }

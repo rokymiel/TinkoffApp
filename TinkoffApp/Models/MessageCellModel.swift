@@ -17,7 +17,7 @@ struct Message {
 //        case input
 //        case output
 //    }
-    
+    let messageId: String
     let content: String
     let created: Date
     let senderId: String
