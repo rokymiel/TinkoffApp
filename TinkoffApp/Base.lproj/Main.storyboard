@@ -67,7 +67,7 @@
         <scene sceneID="ng0-X6-AXT">
             <objects>
                 <tableViewController id="36B-Mg-q34" customClass="ConversationsListViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3yb-PB-4ou">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3yb-PB-4ou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem id="sCq-gl-b3r">
-                                <view key="customView" contentMode="scaleToFill" ambiguous="YES" id="nyI-1d-0jF">
+                                <view key="customView" contentMode="scaleToFill" id="nyI-1d-0jF">
                                     <rect key="frame" x="273" y="0.0" width="45" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>

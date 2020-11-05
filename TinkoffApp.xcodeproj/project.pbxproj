@@ -38,6 +38,7 @@
 		7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB00D78252D105400DE922A /* ThemesView.storyboard */; };
 		7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */; };
 		7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7D252D8B1100DE922A /* ThemeManager.swift */; };
+		7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */; };
 		A1E58E10EA8C6E9A637FA558 /* Pods_TinkoffApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162272FA29550287C5B7CC60 /* Pods_TinkoffApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		7DB00D78252D105400DE922A /* ThemesView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThemesView.storyboard; sourceTree = "<group>"; };
 		7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPickerDelegate.swift; sourceTree = "<group>"; };
 		7DB00D7D252D8B1100DE922A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A03CBAFF21F65724AAFB0499 /* Pods-TinkoffApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D185DB1554DE31DB1EFD7DBF /* Pods-TinkoffApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.release.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +204,7 @@
 				7DA599A72537583200B0F078 /* DataManager.swift */,
 				7D755F0225409C1C009282BD /* UserIDManager.swift */,
 				7D592B75254A0D42008B90EC /* CoreDataManager.swift */,
+				7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
 				7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */,
 				7D592B722549B986008B90EC /* CoreDataStack.swift in Sources */,
+				7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */,
 				7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */,
 				7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */,
 				7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */,

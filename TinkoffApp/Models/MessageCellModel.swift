@@ -22,6 +22,7 @@ struct Message {
     let created: Date
     let senderId: String
     let senderName: String
+    let channelID: String
     
 }
 
