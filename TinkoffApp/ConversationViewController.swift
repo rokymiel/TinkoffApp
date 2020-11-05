@@ -56,7 +56,6 @@ class ConversationViewController: UIViewController, NSFetchedResultsControllerDe
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
-        print("channels/\(conversation.identifier ?? "")/messages")
         reference = db.collection("channels/\(conversation.identifier ?? "")/messages")
         reference.addSnapshotListener { [weak self] snapshot, _ in
             if let shot = snapshot {
@@ -102,7 +101,6 @@ class ConversationViewController: UIViewController, NSFetchedResultsControllerDe
         for changeDocument in documents {
             switch changeDocument.type {
             case .added, .modified:
-                print("edited")
                 if !tableViewDataSource.data().contains(where: {$0.messageId == changeDocument.document.documentID}) {
                     let data = changeDocument.document.data()
                     if let senderName = data["senderName"] as? String,

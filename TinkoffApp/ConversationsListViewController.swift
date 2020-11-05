@@ -81,31 +81,27 @@ class ConversationsListViewController: UITableViewController, ThemesPickerDelega
         for changeDocument in documents {
             switch changeDocument.type {
             case .added:
-                print("edited")
                 if tableViewDataSource.data().contains(where: {$0.identifier == changeDocument.document.documentID}) {
                     update(changeDocument)
                 } else {
-                let data = changeDocument.document.data()
-                if let name = data["name"] as? String {
-                    let lastMessage = data["lastMessage"] as? String
-                    let lastActivity = (data["lastActivity"] as? Timestamp)?.dateValue()
-                    channelsToSave.append(Channel(identifier: changeDocument.document.documentID, name: name, lastMessage: lastMessage, lastActivity: lastActivity))
+                    let data = changeDocument.document.data()
+                    if let name = data["name"] as? String {
+                        let lastMessage = data["lastMessage"] as? String
+                        let lastActivity = (data["lastActivity"] as? Timestamp)?.dateValue()
+                        channelsToSave.append(Channel(identifier: changeDocument.document.documentID, name: name, lastMessage: lastMessage, lastActivity: lastActivity))
                     }
                     
                 }
                 
             case .modified:
-                print("Modi")
                 let data = changeDocument.document.data()
                 if let name = data["name"] as? String {
-                    print(changeDocument.document.documentID)
                     let lastMessage = data["lastMessage"] as? String
                     let lastActivity = (data["lastActivity"] as? Timestamp)?.dateValue()
                     CoreDataManager.updateChannel(Channel(identifier: changeDocument.document.documentID, name: name, lastMessage: lastMessage, lastActivity: lastActivity))
                     
                 }
             case .removed:
-                print("removed")
                 CoreDataManager.deleteChannel(with: changeDocument.document.documentID)
                 
             }
@@ -116,7 +112,6 @@ class ConversationsListViewController: UITableViewController, ThemesPickerDelega
     func update(_ changeDocument: DocumentChange) {
         let data = changeDocument.document.data()
         if let name = data["name"] as? String {
-            print(changeDocument.document.documentID)
             let lastMessage = data["lastMessage"] as? String
             let lastActivity = (data["lastActivity"] as? Timestamp)?.dateValue()
             CoreDataManager.updateChannel(Channel(identifier: changeDocument.document.documentID, name: name, lastMessage: lastMessage, lastActivity: lastActivity))
@@ -165,7 +160,6 @@ class ConversationsListViewController: UITableViewController, ThemesPickerDelega
                 
             }
         case .delete:
-            print("BBBBBBBBBBBBBB")
             if let index = indexPath {
                 chatList.deleteRows(at: [index], with: .fade)
             }
@@ -191,18 +185,16 @@ class ConversationsListViewController: UITableViewController, ThemesPickerDelega
         
     }
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .normal,
-                                              title: "Delete", handler: { (_: UIContextualAction, _: UIView, success: (Bool) -> Void) in
-                                                print("delete")
-                                                let commit = self.tableViewDataSource.fetchedResultsController.object(at: indexPath)
-                                                if let c = commit as? Channel_db {
-                                                    CoreDataManager.deleteChannel(c)
-                                                    if let id = c.identifier {
-                                                        self.reference.document(id).delete()
-                                                    }
-                                                }
-                                                success(true)
-        })
+        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { (_: UIContextualAction, _: UIView, success: (Bool) -> Void) in
+            let commit = self.tableViewDataSource.fetchedResultsController.object(at: indexPath)
+            if let c = commit as? Channel_db {
+                CoreDataManager.deleteChannel(c)
+                if let id = c.identifier {
+                    self.reference.document(id).delete()
+                }
+            }
+            success(true)
+        }
         deleteAction.backgroundColor = .red
         
         return UISwipeActionsConfiguration(actions: [deleteAction])

@@ -82,6 +82,9 @@ class CoreDataManager {
         
         //coreAsync.printSavedData(with: "На устройстве: ")
     }
+    
+    /// Удаление канала по id
+    /// - Parameter id: id канала
     static func deleteChannel(with id: String) {
         let request: NSFetchRequest<Channel_db> = Channel_db.fetchRequest()
         let predicate = NSPredicate(format: "identifier == %@", id)
@@ -99,6 +102,9 @@ class CoreDataManager {
         }
         
     }
+    
+    /// Удаление канала
+    /// - Parameter channel: Канал для удаления
     static func deleteChannel(_ channel: Channel_db) {
         deleteChannel(with: channel.identifier!)
     }
@@ -108,23 +114,20 @@ class CoreDataManager {
         return fetchRequest
         
     }
-//    static func contains(with id: String) -> Bool{
-//        let request: NSFetchRequest<Channel_db> = Channel_db.fetchRequest()
-//        let predicate = NSPredicate(format: "identifier == %@", id)
-//        request.predicate = predicate
-//        return coreDataStack.fetchManyOnMain(request: request)?.count ?? 0 > 0
-//    }
+    
+    /// Обновление канала
+    /// - Parameter channel: канал для обновления
     static func updateChannel(_ channel: Channel) {
         let request: NSFetchRequest<Channel_db> = Channel_db.fetchRequest()
         let predicate = NSPredicate(format: "identifier == %@", channel.identifier)
         request.predicate = predicate
         let request2: NSFetchRequest<Channel_db> = Channel_db.fetchRequest()
         request2.predicate = predicate
-        if let cc = coreDataStack.fetch(request: request), let c2 = coreDataStack.fetchOnMain(request: request2) {
-            cc.setValue(channel.lastActivity, forKey: "lastActivity")
-            cc.setValue(channel.lastMessage, forKey: "lastMessage")
-            c2.setValue(channel.lastActivity, forKey: "lastActivity")
-            c2.setValue(channel.lastMessage, forKey: "lastMessage")
+        if let channelOnWriter = coreDataStack.fetch(request: request), let channelOnMain = coreDataStack.fetchOnMain(request: request2) {
+            channelOnWriter.setValue(channel.lastActivity, forKey: "lastActivity")
+            channelOnWriter.setValue(channel.lastMessage, forKey: "lastMessage")
+            channelOnMain.setValue(channel.lastActivity, forKey: "lastActivity")
+            channelOnMain.setValue(channel.lastMessage, forKey: "lastMessage")
             
         }
     }
