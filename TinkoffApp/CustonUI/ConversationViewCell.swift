@@ -9,7 +9,7 @@
 import UIKit
 
 class ConversationViewCell: UITableViewCell, ConfigurableView {
-    typealias ConfigurableType = Channel
+    typealias ConfigurableType = Channel_db
     @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!

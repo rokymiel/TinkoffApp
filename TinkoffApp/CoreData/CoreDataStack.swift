@@ -11,7 +11,7 @@ import CoreData
 
 class  CoreDataStack {
     var didUpdateDataBase: ((CoreDataStack) -> Void)?
-
+    
     private var storeURL: URL = {
         guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
             fatalError("document has not found")
@@ -104,7 +104,7 @@ class  CoreDataStack {
     func enableObservers() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector:
-                                       #selector(managedObjectContextObjectsDidChange),
+            #selector(managedObjectContextObjectsDidChange),
                                        name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
                                        object: mainContext)
     }
@@ -139,5 +139,33 @@ class  CoreDataStack {
         DispatchQueue.global().async {
             self.printSaved(message)
         }
+    }
+    
+    /// Удаляет объект из writerContext
+    /// - Parameter object: Объект для удаления
+    func delete(object: NSManagedObject) {
+        writterContext.delete(object)
+        do {
+            try writterContext.save()
+        } catch {
+            NSLog("Ошибка удаления объекта \(object)")
+        }
+    }
+    func fetch<T: NSManagedObject>(request: NSFetchRequest<T>) -> T? {
+        return fetchMany(request: request)?.first
+    }
+    func fetchOnMain<T: NSManagedObject>(request: NSFetchRequest<T>) -> T? {
+        return fetchManyOnMain(request: request)?.first
+        
+    }
+    func fetchMany<T: NSManagedObject>(request: NSFetchRequest<T>) -> [T]? {
+        
+        return try? writterContext.fetch(request)
+        
+    }
+    func fetchManyOnMain<T: NSManagedObject>(request: NSFetchRequest<T>) -> [T]? {
+        
+        return try? mainContext.fetch(request)
+        
     }
 }

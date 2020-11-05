@@ -9,9 +9,9 @@
 import UIKit
 
 class ChatViewCell: UITableViewCell, ConfigurableView {
-    typealias ConfigurableType = Message
+    typealias ConfigurableType = Message_db
     var userID: String!
-    func configure(with model: Message) {
+    func configure(with model: Message_db) {
         inputMessageView.layer.cornerRadius = 20
         outputMessageView.layer.cornerRadius = 20
         if userID == model.senderId {

@@ -8,16 +8,39 @@
 
 import UIKit
 import Firebase
-class ConversationViewController: UIViewController {
+import CoreData
+class ConversationViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var messageBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var newMessageField: UITextField!
     @IBOutlet weak var messageBar: UIToolbar!
     @IBOutlet weak var chatView: UITableView!
-    var conversation: Channel!
+    var conversation: Channel_db!
     lazy var db = Firestore.firestore()
     var reference: CollectionReference!
-    var messages = [Message]()
+    
+    lazy var tableViewDataSource: TableViewDataSource<Message_db> = {
+        let sort = NSSortDescriptor(key: "created", ascending: true)
+        var predicate: NSPredicate?
+        if let id = conversation.identifier {
+            predicate = NSPredicate(format: "channelID == %@", id)
+        }
+        let request: NSFetchRequest<NSFetchRequestResult> = Message_db.fetchRequest()
+        request.sortDescriptors = [sort]
+        request.predicate = predicate
+        let fetchedResultsController = CoreDataManager.getFetchedResultsController(fetchRequest: request)
+        fetchedResultsController.delegate = self
+        let source = TableViewDataSource<Message_db>(fetchedResultsController: fetchedResultsController) { [weak self] item, indexPath in
+            if let cell = self?.chatView.dequeueReusableCell(withIdentifier: String(describing: ChatViewCell.self), for: indexPath) as? ChatViewCell {
+                cell.userID = UserIDManager.userId
+                cell.configure(with: item)
+                return cell
+            }
+            return UITableViewCell()
+        }
+        return source
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,12 +56,11 @@ class ConversationViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
-        reference = db.collection("channels/\(conversation.identifier)/messages")
+        reference = db.collection("channels/\(conversation.identifier ?? "")/messages")
         reference.addSnapshotListener { [weak self] snapshot, _ in
             if let shot = snapshot {
-                self?.getMessages(shot.documents)
-                self?.chatView.reloadData()
-                if let messageCount = self?.messages.count, messageCount > 0 {
+                self?.messages(shot.documentChanges)
+                if let messageCount = self?.tableViewDataSource.data().count, messageCount > 0 {
                     let indexPath = IndexPath(row: messageCount - 1, section: 0)
                     self?.chatView.scrollToRow(at: indexPath, at: .bottom, animated: false)
                 }
@@ -47,7 +69,7 @@ class ConversationViewController: UIViewController {
         }
         title = conversation.name
         chatView.register(UINib(nibName: String(describing: ChatViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ChatViewCell.self))
-        chatView.dataSource = self
+        chatView.dataSource = tableViewDataSource
         setColors()
     }
     
@@ -74,20 +96,33 @@ class ConversationViewController: UIViewController {
         
     }
     // MARK: - Messages
-    func getMessages(_ documents: [QueryDocumentSnapshot]) {
-        messages = [Message]()
-        for document in documents {
-            let data = document.data()
-            if let senderName = data["senderName"] as? String,
-                let created = data["created"] as? Timestamp,
-                let content = data["content"] as? String,
-                let senderId = data["senderId"] as? String, !content.isEmpty {
-                messages.append(.init(messageId: document.documentID, content: content, created: created.dateValue(), senderId: senderId, senderName: senderName))
+    func messages(_ documents: [DocumentChange]) {
+        var messagesToSave=[Message]()
+        for changeDocument in documents {
+            switch changeDocument.type {
+            case .added, .modified:
+                if !tableViewDataSource.data().contains(where: {$0.messageId == changeDocument.document.documentID}) {
+                    let data = changeDocument.document.data()
+                    if let senderName = data["senderName"] as? String,
+                        let created = data["created"] as? Timestamp,
+                        let content = data["content"] as? String,
+                        let senderId = data["senderId"] as? String,
+                        let channelID = conversation.identifier,
+                        !content.isEmpty {
+                        messagesToSave.append(.init(messageId: changeDocument.document.documentID,
+                                                    content: content,
+                                                    created: created.dateValue(),
+                                                    senderId: senderId, senderName: senderName,
+                                                    channelID: channelID))
+                    }
+                    
+                }
+            default : break
             }
             
         }
-        messages.sort(by: {$0.created.compare($1.created) == .orderedAscending})
-        CoreDataManager.save(messages: messages)
+        CoreDataManager.save(messages: messagesToSave)
+        
     }
     @IBAction func sendNewMessage(_ sender: Any) {
         if let message = newMessageField.text, !message.isEmpty, let userId = UserIDManager.userId {
@@ -104,23 +139,45 @@ class ConversationViewController: UIViewController {
             
         }
     }
-}
-// MARK: - Table View Data
-extension ConversationViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ChatViewCell.self), for: indexPath) as? ChatViewCell {
-            cell.userID = UserIDManager.userId
-            cell.configure(with: messages[indexPath.row])
-            return cell
+    // MARK: - NSFetchedResultsControllerDelegate
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any, at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let newIndex = newIndexPath {
+                chatView.insertRows(at: [newIndex], with: .fade)
+            }
+        case .move:
+            if let index = indexPath, let newIndex = newIndexPath {
+                chatView.deleteRows(at: [index], with: .fade)
+                chatView.insertRows(at: [newIndex], with: .fade)
+                
+            }
+        case .update:
+            if let index = indexPath {
+                chatView.reloadRows(at: [index], with: .fade)
+                
+            }
+        case .delete:
+            if let index = indexPath {
+                chatView.deleteRows(at: [index], with: .fade)
+            }
+            
+        @unknown default:
+            fatalError()
         }
-        return UITableViewCell()
+        
     }
-    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.chatView.beginUpdates()
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.chatView.endUpdates()
+    }
 }
+
 // MARK: - Animate with keyboard
 extension ConversationViewController {
     func animateWithKeyboard(

@@ -17,6 +17,7 @@ extension Message_db {
         created = message.created
         content = message.content
         messageId = message.messageId
+        channelID = message.channelID
     }
 }
 
