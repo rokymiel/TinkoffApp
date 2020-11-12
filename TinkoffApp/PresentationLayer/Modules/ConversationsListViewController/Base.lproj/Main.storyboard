@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVR-LZ-kBs">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Channels-->
+        <scene sceneID="ng0-X6-AXT">
+            <objects>
+                <tableViewController id="36B-Mg-q34" customClass="ConversationsListViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3yb-PB-4ou">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="36B-Mg-q34" id="0rC-oN-NLN"/>
+                            <outlet property="delegate" destination="36B-Mg-q34" id="gep-ex-WaB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Channels" id="hvW-6u-qcU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="gear_ico" id="aAn-KK-Dxp">
+                            <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="yfq-HD-RS4" kind="show" id="v5h-Ih-epZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="S2I-qo-J79">
+                                <connections>
+                                    <action selector="addNewChennel:" destination="36B-Mg-q34" id="mXM-Vm-OWr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="sCq-gl-b3r">
+                                <view key="customView" contentMode="scaleToFill" id="nyI-1d-0jF">
+                                    <rect key="frame" x="273" y="0.0" width="45" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pht-g3-V9B">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <color key="backgroundColor" red="0.89411764705882346" green="0.90980392156862744" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="3Z7-o2-37P"/>
+                                                <constraint firstAttribute="height" constant="44" id="FQS-Z4-1oK"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-c6-XjJ">
+                                            <rect key="frame" x="9" y="12" width="26" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.21176470588235294" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="pht-g3-V9B" firstAttribute="top" secondItem="nyI-1d-0jF" secondAttribute="top" id="4S3-35-KHE"/>
+                                        <constraint firstAttribute="trailing" secondItem="pht-g3-V9B" secondAttribute="trailing" id="AKC-kF-Otl"/>
+                                        <constraint firstItem="gRu-c6-XjJ" firstAttribute="centerY" secondItem="pht-g3-V9B" secondAttribute="centerY" id="PoL-Lg-j49"/>
+                                        <constraint firstItem="gRu-c6-XjJ" firstAttribute="centerX" secondItem="pht-g3-V9B" secondAttribute="centerX" id="jBn-am-Jn6"/>
+                                        <constraint firstItem="pht-g3-V9B" firstAttribute="leading" secondItem="nyI-1d-0jF" secondAttribute="leading" id="o0Z-6i-eZa"/>
+                                        <constraint firstAttribute="bottom" secondItem="pht-g3-V9B" secondAttribute="bottom" id="pY9-tc-Pqc"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="0ls-TG-f6k" appends="YES" id="A6W-FE-mh6"/>
+                                    </connections>
+                                </view>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatList" destination="3yb-PB-4ou" id="IaG-OV-OWN"/>
+                        <outlet property="profileView" destination="pht-g3-V9B" id="xhl-dw-ydT"/>
+                        <segue destination="l0X-nb-5ub" kind="show" identifier="toChat" id="dfI-5Q-IM1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHn-Bq-v9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0ls-TG-f6k">
+                    <connections>
+                        <segue destination="obm-t6-Bcn" kind="presentation" id="dTv-2v-LXb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="612" y="273.39901477832512"/>
+        </scene>
+        <!--ConversationView-->
+        <scene sceneID="5F5-Ue-8I0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ConversationView" id="l0X-nb-5ub" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pY6-Dc-8H8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4j-YJ-79e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="426"/>
+        </scene>
+        <!--ThemesView-->
+        <scene sceneID="XAs-Pm-tcN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ThemesView" referencedIdentifier="ThemesView" id="yfq-HD-RS4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Z5-vU-Kew"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gax-xi-wB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="275"/>
+        </scene>
+        <!--ProfileView-->
+        <scene sceneID="aUI-HN-FZD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileView" id="obm-t6-Bcn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0I-iy-wTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="128"/>
+        </scene>
+        <!--Root Navigation View Controller-->
+        <scene sceneID="IWG-hL-Ckw">
+            <objects>
+                <navigationController id="HVR-LZ-kBs" customClass="RootNavigationViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nai-FK-fF0">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="36B-Mg-q34" kind="relationship" relationship="rootViewController" id="iGJ-Po-xZl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxF-53-Y4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="275"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear_ico" width="19" height="19"/>
+    </resources>
+</document>

@@ -26,14 +26,22 @@
 		7D7C919525193283003D479C /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C919425193283003D479C /* ProfileView.storyboard */; };
 		7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C9196251932D5003D479C /* ProfileViewController.swift */; };
 		7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */; };
-		7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD55D251124FB00C7EFE8 /* ViewController.swift */; };
-		7D9BD561251124FB00C7EFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD55F251124FB00C7EFE8 /* Main.storyboard */; };
 		7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD562251124FE00C7EFE8 /* Assets.xcassets */; };
-		7D9BD566251124FE00C7EFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */; };
 		7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD5912511367400C7EFE8 /* Logger.swift */; };
 		7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A32536375900B0F078 /* GCDDataManager.swift */; };
 		7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A52536376900B0F078 /* OperationDataManager.swift */; };
 		7DA599A82537583200B0F078 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA599A72537583200B0F078 /* DataManager.swift */; };
+		7DA851F8255C78B80067448A /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA851F7255C78B80067448A /* RootAssembly.swift */; };
+		7DA851FC255C7C050067448A /* ConversationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA851FB255C7C050067448A /* ConversationView.storyboard */; };
+		7DA85204255C833E0067448A /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85203255C833E0067448A /* RootNavigationViewController.swift */; };
+		7DA85206255C84A80067448A /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85205255C84A80067448A /* ServicesAssembly.swift */; };
+		7DA85207255C8B090067448A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */; };
+		7DA85208255C8B100067448A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD55F251124FB00C7EFE8 /* Main.storyboard */; };
+		7DA8520F255CB1020067448A /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8520E255CB1020067448A /* ChatModel.swift */; };
+		7DA85211255DB0B70067448A /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85210255DB0B70067448A /* ChatListModel.swift */; };
+		7DA85213255DB7400067448A /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85212255DB7400067448A /* CoreAssembly.swift */; };
+		7DA85215255DBF9E0067448A /* UserIDSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85214255DBF9E0067448A /* UserIDSaver.swift */; };
+		7DA85217255DBFB70067448A /* ThemeSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA85216255DBFB70067448A /* ThemeSaver.swift */; };
 		7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D74252D0FF500DE922A /* ThemesViewController.swift */; };
 		7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB00D78252D105400DE922A /* ThemesView.storyboard */; };
 		7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */; };
@@ -64,7 +72,6 @@
 		7D7C9196251932D5003D479C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D9BD55D251124FB00C7EFE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D9BD560251124FB00C7EFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D9BD562251124FE00C7EFE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9BD565251124FE00C7EFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +80,15 @@
 		7DA599A32536375900B0F078 /* GCDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDDataManager.swift; sourceTree = "<group>"; };
 		7DA599A52536376900B0F078 /* OperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
 		7DA599A72537583200B0F078 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7DA851F7255C78B80067448A /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
+		7DA851FB255C7C050067448A /* ConversationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConversationView.storyboard; sourceTree = "<group>"; };
+		7DA85203255C833E0067448A /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		7DA85205255C84A80067448A /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		7DA8520E255CB1020067448A /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		7DA85210255DB0B70067448A /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		7DA85212255DB7400067448A /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		7DA85214255DBF9E0067448A /* UserIDSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDSaver.swift; sourceTree = "<group>"; };
+		7DA85216255DBFB70067448A /* ThemeSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSaver.swift; sourceTree = "<group>"; };
 		7DB00D74252D0FF500DE922A /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		7DB00D78252D105400DE922A /* ThemesView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThemesView.storyboard; sourceTree = "<group>"; };
 		7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPickerDelegate.swift; sourceTree = "<group>"; };
@@ -103,13 +119,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7D19304225234B4A00227843 /* Models */ = {
+		7D19304225234B4A00227843 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
 				7D19304325234B7200227843 /* ConversationCellModel.swift */,
 				7D19305B2523BDE200227843 /* MessageCellModel.swift */,
 			);
-			path = Models;
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 		7D19304525234BFF00227843 /* Protocols */ = {
@@ -121,30 +137,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		7D19304C252350FF00227843 /* CustonUI */ = {
+		7D19304C252350FF00227843 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				7D19304825234CB000227843 /* ConversationViewCell.swift */,
-				7D19304925234CB000227843 /* ConversationViewCell.xib */,
-				7D1930572523BDBC00227843 /* ChatViewCell.swift */,
-				7D1930582523BDBC00227843 /* ChatViewCell.xib */,
+				7DA85202255C80340067448A /* ChatViewCell */,
+				7DA85201255C801F0067448A /* ConversationViewCell */,
 			);
-			path = CustonUI;
-			sourceTree = "<group>";
-		};
-		7D19305E252502F600227843 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				7D9BD55D251124FB00C7EFE8 /* ViewController.swift */,
-				7D9BD55F251124FB00C7EFE8 /* Main.storyboard */,
-				7D7C919425193283003D479C /* ProfileView.storyboard */,
-				7D7C9196251932D5003D479C /* ProfileViewController.swift */,
-				7D19304D25235C4A00227843 /* ConversationsListViewController.swift */,
-				7D1930532523A51D00227843 /* ConversationViewController.swift */,
-				7DB00D74252D0FF500DE922A /* ThemesViewController.swift */,
-				7DB00D78252D105400DE922A /* ThemesView.storyboard */,
-			);
-			name = ViewControllers;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7D592B6D2549B353008B90EC /* CoreData */ = {
@@ -179,32 +178,177 @@
 		7D9BD558251124FB00C7EFE8 /* TinkoffApp */ = {
 			isa = PBXGroup;
 			children = (
-				7D592B6D2549B353008B90EC /* CoreData */,
 				7D755F00253F921A009282BD /* GoogleService-Info.plist */,
-				7DB00D7C252D8AEB00DE922A /* Services */,
-				7D19305E252502F600227843 /* ViewControllers */,
-				7D19304525234BFF00227843 /* Protocols */,
-				7D19304225234B4A00227843 /* Models */,
-				7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */,
-				7D9BD562251124FE00C7EFE8 /* Assets.xcassets */,
-				7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */,
 				7D9BD567251124FE00C7EFE8 /* Info.plist */,
-				7D9BD5912511367400C7EFE8 /* Logger.swift */,
-				7D19304C252350FF00227843 /* CustonUI */,
+				7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */,
+				7DA851F7255C78B80067448A /* RootAssembly.swift */,
+				7D9BD562251124FE00C7EFE8 /* Assets.xcassets */,
+				7DA851F1255C74F40067448A /* CoreLayer */,
+				7D9BD564251124FE00C7EFE8 /* LaunchScreen.storyboard */,
+				7DA851EF255C73D90067448A /* PresentationLayer */,
+				7DA851F0255C73F90067448A /* ServiceLayer */,
+				7DA851F2255C75080067448A /* Supporting Files */,
 			);
 			path = TinkoffApp;
+			sourceTree = "<group>";
+		};
+		7DA851EF255C73D90067448A /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7DA851F6255C75E30067448A /* Modules */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		7DA851F0255C73F90067448A /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7D9BD5912511367400C7EFE8 /* Logger.swift */,
+				7DA851F4255C75B40067448A /* Assembly */,
+				7DB00D7C252D8AEB00DE922A /* Services */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		7DA851F1255C74F40067448A /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8520B255C9F670067448A /* Data */,
+				7DA851F5255C75C20067448A /* Assembly */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		7DA851F2255C75080067448A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304225234B4A00227843 /* Data Models */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DA851F4255C75B40067448A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7DA85205255C84A80067448A /* ServicesAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7DA851F5255C75C20067448A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7DA85212255DB7400067448A /* CoreAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7DA851F6255C75E30067448A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8520D255C9FD20067448A /* Supporting Files */,
+				7D19304525234BFF00227843 /* Protocols */,
+				7D19304C252350FF00227843 /* Cells */,
+				7DA85200255C7F3A0067448A /* ThemesViewController */,
+				7DA851FF255C7F1F0067448A /* ConversationViewController */,
+				7DA851FE255C7EF70067448A /* ProfileViewController */,
+				7DA851FD255C7EB80067448A /* ConversationsListViewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7DA851FD255C7EB80067448A /* ConversationsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304D25235C4A00227843 /* ConversationsListViewController.swift */,
+				7D9BD55F251124FB00C7EFE8 /* Main.storyboard */,
+				7DA85203255C833E0067448A /* RootNavigationViewController.swift */,
+				7DA85210255DB0B70067448A /* ChatListModel.swift */,
+			);
+			path = ConversationsListViewController;
+			sourceTree = "<group>";
+		};
+		7DA851FE255C7EF70067448A /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D7C919425193283003D479C /* ProfileView.storyboard */,
+				7D7C9196251932D5003D479C /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		7DA851FF255C7F1F0067448A /* ConversationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D1930532523A51D00227843 /* ConversationViewController.swift */,
+				7DA851FB255C7C050067448A /* ConversationView.storyboard */,
+				7DA8520E255CB1020067448A /* ChatModel.swift */,
+			);
+			path = ConversationViewController;
+			sourceTree = "<group>";
+		};
+		7DA85200255C7F3A0067448A /* ThemesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7DB00D74252D0FF500DE922A /* ThemesViewController.swift */,
+				7DB00D78252D105400DE922A /* ThemesView.storyboard */,
+			);
+			path = ThemesViewController;
+			sourceTree = "<group>";
+		};
+		7DA85201255C801F0067448A /* ConversationViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D19304825234CB000227843 /* ConversationViewCell.swift */,
+				7D19304925234CB000227843 /* ConversationViewCell.xib */,
+			);
+			path = ConversationViewCell;
+			sourceTree = "<group>";
+		};
+		7DA85202255C80340067448A /* ChatViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D1930572523BDBC00227843 /* ChatViewCell.swift */,
+				7D1930582523BDBC00227843 /* ChatViewCell.xib */,
+			);
+			path = ChatViewCell;
+			sourceTree = "<group>";
+		};
+		7DA8520B255C9F670067448A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8520C255C9F7E0067448A /* LocaleData */,
+				7D592B6D2549B353008B90EC /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7DA8520C255C9F7E0067448A /* LocaleData */ = {
+			isa = PBXGroup;
+			children = (
+				7DA599A72537583200B0F078 /* DataManager.swift */,
+				7DA85214255DBF9E0067448A /* UserIDSaver.swift */,
+				7DA85216255DBFB70067448A /* ThemeSaver.swift */,
+			);
+			path = LocaleData;
+			sourceTree = "<group>";
+		};
+		7DA8520D255C9FD20067448A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		7DB00D7C252D8AEB00DE922A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7DB00D7D252D8B1100DE922A /* ThemeManager.swift */,
 				7DA599A32536375900B0F078 /* GCDDataManager.swift */,
 				7DA599A52536376900B0F078 /* OperationDataManager.swift */,
-				7DA599A72537583200B0F078 /* DataManager.swift */,
+				7DB00D7D252D8B1100DE922A /* ThemeManager.swift */,
 				7D755F0225409C1C009282BD /* UserIDManager.swift */,
 				7D592B75254A0D42008B90EC /* CoreDataManager.swift */,
-				7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -278,14 +422,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA85208255C8B100067448A /* Main.storyboard in Resources */,
+				7DA85207255C8B090067448A /* LaunchScreen.storyboard in Resources */,
 				7D19304B25234CB000227843 /* ConversationViewCell.xib in Resources */,
 				7D755F01253F921A009282BD /* GoogleService-Info.plist in Resources */,
 				7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */,
-				7D9BD566251124FE00C7EFE8 /* LaunchScreen.storyboard in Resources */,
 				7D19305A2523BDBC00227843 /* ChatViewCell.xib in Resources */,
 				7D7C919525193283003D479C /* ProfileView.storyboard in Resources */,
 				7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */,
-				7D9BD561251124FB00C7EFE8 /* Main.storyboard in Resources */,
+				7DA851FC255C7C050067448A /* ConversationView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +501,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D592B78254B156C008B90EC /* CoreDataStackAsync.swift in Sources */,
-				7D9BD55E251124FB00C7EFE8 /* ViewController.swift in Sources */,
 				7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */,
+				7DA8520F255CB1020067448A /* ChatModel.swift in Sources */,
 				7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */,
 				7D19304E25235C4A00227843 /* ConversationsListViewController.swift in Sources */,
 				7D1930552523A51D00227843 /* ConversationViewController.swift in Sources */,
@@ -370,15 +515,22 @@
 				7DA599A82537583200B0F078 /* DataManager.swift in Sources */,
 				7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */,
 				7D755F0325409C1C009282BD /* UserIDManager.swift in Sources */,
+				7DA85211255DB0B70067448A /* ChatListModel.swift in Sources */,
 				7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */,
+				7DA85213255DB7400067448A /* CoreAssembly.swift in Sources */,
 				7DA599A62536376900B0F078 /* OperationDataManager.swift in Sources */,
 				7D592B722549B986008B90EC /* CoreDataStack.swift in Sources */,
 				7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */,
+				7DA85215255DBF9E0067448A /* UserIDSaver.swift in Sources */,
+				7DA851F8255C78B80067448A /* RootAssembly.swift in Sources */,
 				7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */,
+				7DA85204255C833E0067448A /* RootNavigationViewController.swift in Sources */,
 				7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */,
 				7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */,
 				7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */,
+				7DA85206255C84A80067448A /* ServicesAssembly.swift in Sources */,
 				7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */,
+				7DA85217255DBFB70067448A /* ThemeSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
