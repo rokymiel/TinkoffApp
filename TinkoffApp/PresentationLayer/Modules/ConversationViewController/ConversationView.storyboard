@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46z-dp-VBp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Conversation View Controller-->
+        <scene sceneID="78K-Ct-cof">
+            <objects>
+                <viewController storyboardIdentifier="Conversation" id="46z-dp-VBp" customClass="ConversationViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cB1-CN-nFX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWu-4u-NRx">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" id="S2L-tA-VvT">
+                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Z3f-JD-DNE">
+                                            <rect key="frame" x="20" y="10" width="299" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem image="sendIcon" width="104.66666412353516" style="plain" id="5FA-O4-MW5">
+                                        <connections>
+                                            <action selector="sendNewMessage:" destination="46z-dp-VBp" id="OhA-nh-hHg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q7-xq-Vme">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Q7-xq-Vme" firstAttribute="top" secondItem="3hy-5j-Wwl" secondAttribute="top" id="V1F-FD-W6b"/>
+                            <constraint firstItem="pWu-4u-NRx" firstAttribute="top" secondItem="5Q7-xq-Vme" secondAttribute="bottom" id="ccu-Cz-VyB"/>
+                            <constraint firstItem="5Q7-xq-Vme" firstAttribute="leading" secondItem="3hy-5j-Wwl" secondAttribute="leading" id="dWw-pF-08W"/>
+                            <constraint firstItem="pWu-4u-NRx" firstAttribute="leading" secondItem="3hy-5j-Wwl" secondAttribute="leading" id="kny-bR-rNf"/>
+                            <constraint firstItem="5Q7-xq-Vme" firstAttribute="trailing" secondItem="3hy-5j-Wwl" secondAttribute="trailing" id="mgZ-LN-pGw"/>
+                            <constraint firstItem="pWu-4u-NRx" firstAttribute="bottom" secondItem="3hy-5j-Wwl" secondAttribute="bottom" id="tyM-MT-7ri"/>
+                            <constraint firstItem="3hy-5j-Wwl" firstAttribute="trailing" secondItem="pWu-4u-NRx" secondAttribute="trailing" id="xMA-x5-nBl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3hy-5j-Wwl"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Wng-0J-n4f"/>
+                    <connections>
+                        <outlet property="chatView" destination="5Q7-xq-Vme" id="bhS-og-hiy"/>
+                        <outlet property="messageBar" destination="pWu-4u-NRx" id="T5a-qd-ogW"/>
+                        <outlet property="messageBarBottomConstraint" destination="tyM-MT-7ri" id="Kfj-bp-X8I"/>
+                        <outlet property="newMessageField" destination="Z3f-JD-DNE" id="ozm-5k-8Fe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pns-5K-k5O" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="275"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sendIcon" width="21" height="21"/>
+    </resources>
+</document>
