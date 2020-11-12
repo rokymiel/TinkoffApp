@@ -213,7 +213,7 @@
 		7DA851F1255C74F40067448A /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				7DA8520B255C9F670067448A /* Models */,
+				7DA8520B255C9F670067448A /* Data */,
 				7DA851F5255C75C20067448A /* Assembly */,
 			);
 			path = CoreLayer;
@@ -314,13 +314,13 @@
 			path = ChatViewCell;
 			sourceTree = "<group>";
 		};
-		7DA8520B255C9F670067448A /* Models */ = {
+		7DA8520B255C9F670067448A /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				7DA8520C255C9F7E0067448A /* LocaleData */,
 				7D592B6D2549B353008B90EC /* CoreData */,
 			);
-			path = Models;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7DA8520C255C9F7E0067448A /* LocaleData */ = {
