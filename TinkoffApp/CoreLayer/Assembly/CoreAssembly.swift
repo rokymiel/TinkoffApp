@@ -13,6 +13,7 @@ protocol ICoreAssembly {
     var dataStackAsync: CoreDataStackAsyncProtocol { get }
     var themeSaver: ThemeSaverProtocol { get }
     var userIDSaver: UserIDSaverProtocol { get }
+    var requestSender: IRequestSender { get }
 }
 
 class CoreAssembly: ICoreAssembly {
@@ -29,5 +30,6 @@ class CoreAssembly: ICoreAssembly {
     }()
     lazy var themeSaver: ThemeSaverProtocol = ThemeSaver(nil)
     lazy var userIDSaver: UserIDSaverProtocol = UserIDSaver(nil)
+    lazy var requestSender: IRequestSender = RequestSender(with: URLSession.shared)
     
 }
