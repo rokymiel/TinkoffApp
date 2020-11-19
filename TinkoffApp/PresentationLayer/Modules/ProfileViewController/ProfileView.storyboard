@@ -176,11 +176,20 @@
                         <outlet property="operationsSaveButton" destination="bYc-tw-MJk" id="gBO-nf-6Nu"/>
                         <outlet property="profileView" destination="3Aj-fy-eZr" id="NKl-2p-IPW"/>
                         <outlet property="userNameField" destination="qRa-Zu-geB" id="Ms7-tD-fIZ"/>
+                        <segue destination="q4L-Z3-ibc" kind="presentation" identifier="toImagesView" id="4L8-sV-Pok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJd-gJ-hiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100" y="2.9556650246305418"/>
+        </scene>
+        <!--ImagesView-->
+        <scene sceneID="ZM0-wx-2jk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImagesView" id="q4L-Z3-ibc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJ0-ya-F8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-39"/>
         </scene>
     </scenes>
 </document>

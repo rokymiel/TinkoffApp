@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sdo-kN-6zD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images View Controller-->
+        <scene sceneID="TRc-Vn-6dp">
+            <objects>
+                <viewController id="Sdo-kN-6zD" customClass="ImagesViewController" customModule="TinkoffApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYi-0o-Zza">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w98-bm-yaW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Select image" id="bkE-1Y-Cbn">
+                                        <barButtonItem key="rightBarButtonItem" id="0Kq-Yj-HID">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J9r-1l-HNd">
+                                                <rect key="frame" x="302" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Close"/>
+                                                <connections>
+                                                    <action selector="closeView:" destination="Sdo-kN-6zD" eventType="touchUpInside" id="39Y-ys-Xhp"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lav-no-NVq">
+                                <rect key="frame" x="10" y="56" width="394" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="HMg-M1-KBE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-7j-QTx">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Heu-7j-QTx" firstAttribute="centerY" secondItem="KiG-oc-DqS" secondAttribute="centerY" id="063-ux-O8W"/>
+                            <constraint firstItem="w98-bm-yaW" firstAttribute="top" secondItem="KiG-oc-DqS" secondAttribute="top" id="0XG-oK-Qwi"/>
+                            <constraint firstItem="lav-no-NVq" firstAttribute="top" secondItem="w98-bm-yaW" secondAttribute="bottom" id="7T9-tl-3XM"/>
+                            <constraint firstAttribute="bottom" secondItem="lav-no-NVq" secondAttribute="bottom" id="KAz-8B-nBK"/>
+                            <constraint firstItem="w98-bm-yaW" firstAttribute="leading" secondItem="KiG-oc-DqS" secondAttribute="leading" id="Kng-79-zc2"/>
+                            <constraint firstItem="KiG-oc-DqS" firstAttribute="trailing" secondItem="lav-no-NVq" secondAttribute="trailing" constant="10" id="gOa-t2-5Go"/>
+                            <constraint firstItem="lav-no-NVq" firstAttribute="leading" secondItem="KiG-oc-DqS" secondAttribute="leading" constant="10" id="gsH-Fy-N6i"/>
+                            <constraint firstItem="w98-bm-yaW" firstAttribute="trailing" secondItem="KiG-oc-DqS" secondAttribute="trailing" id="sAz-Nw-tjq"/>
+                            <constraint firstItem="Heu-7j-QTx" firstAttribute="centerX" secondItem="KiG-oc-DqS" secondAttribute="centerX" id="vav-im-uYK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KiG-oc-DqS"/>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Heu-7j-QTx" id="6ib-iY-VVk"/>
+                        <outlet property="imageList" destination="lav-no-NVq" id="liK-UG-Dmf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTJ-9w-mFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>

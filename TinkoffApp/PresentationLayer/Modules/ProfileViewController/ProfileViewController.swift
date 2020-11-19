@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UITextViewDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UITextViewDelegate, UINavigationControllerDelegate, ImageSelectedDelegate {
     
     @IBOutlet weak var dataIndicator: UIActivityIndicatorView!
     
@@ -40,6 +40,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.openCamera()
         }
         alert.addAction(camera)
+        let load = UIAlertAction(title: "Download", style: .default) { _ in
+            self.performSegue(withIdentifier: "toImagesView", sender: nil)
+        }
+        alert.addAction(load)
         let clear = UIAlertAction(title: "Default", style: .default) { _ in
             if self.image.image != nil {
                 self.saveButtonOn()
@@ -77,13 +81,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
         if let pickedImage = info[.originalImage] as? UIImage {
-            image.image = pickedImage
-            image.isHidden = false
-            saveButtonOn()
+            set(newImage: pickedImage)
         }
         
     }
-    
+    func set(newImage: UIImage) {
+        image.image = newImage
+        image.isHidden = false
+        saveButtonOn()
+    }
     @IBAction func closeView(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -149,7 +155,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         gcdManager.read { [weak self] name, descr, profileImage in
             self?.userNameField.text = name
             self?.descriptionView.text = descr
-            print(profileImage == nil)
             self?.image.image = profileImage
             if  self?.image.image != nil {
                 self?.image.isHidden = false
@@ -180,6 +185,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let alert = UIAlertController(title: "Данные сохранены", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    func selected(image: UIImage) {
+        set(newImage: image)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ImagesViewController {
+            destination.delegate = self
+        }
     }
     @IBAction func editProfile(_ sender: Any) {
         userNameField.isEnabled = !userNameField.isEnabled
