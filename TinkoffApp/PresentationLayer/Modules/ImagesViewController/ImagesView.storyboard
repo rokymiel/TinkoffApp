@@ -44,13 +44,13 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="Heu-7j-QTx">
-                                <rect key="frame" x="197" y="411" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-7j-QTx">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Heu-7j-QTx" firstAttribute="centerY" secondItem="KiG-oc-DqS" secondAttribute="centerY" id="063-ux-O8W"/>
                             <constraint firstItem="w98-bm-yaW" firstAttribute="top" secondItem="KiG-oc-DqS" secondAttribute="top" id="0XG-oK-Qwi"/>
                             <constraint firstItem="lav-no-NVq" firstAttribute="top" secondItem="w98-bm-yaW" secondAttribute="bottom" id="7T9-tl-3XM"/>
                             <constraint firstAttribute="bottom" secondItem="lav-no-NVq" secondAttribute="bottom" id="KAz-8B-nBK"/>
@@ -58,6 +58,7 @@
                             <constraint firstItem="KiG-oc-DqS" firstAttribute="trailing" secondItem="lav-no-NVq" secondAttribute="trailing" constant="10" id="gOa-t2-5Go"/>
                             <constraint firstItem="lav-no-NVq" firstAttribute="leading" secondItem="KiG-oc-DqS" secondAttribute="leading" constant="10" id="gsH-Fy-N6i"/>
                             <constraint firstItem="w98-bm-yaW" firstAttribute="trailing" secondItem="KiG-oc-DqS" secondAttribute="trailing" id="sAz-Nw-tjq"/>
+                            <constraint firstItem="Heu-7j-QTx" firstAttribute="centerX" secondItem="KiG-oc-DqS" secondAttribute="centerX" id="vav-im-uYK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KiG-oc-DqS"/>
                     </view>
