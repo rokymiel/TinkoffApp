@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var gcdSaveButton: UIButton!
+    @IBOutlet weak var profileEditButton: UIButton!
     
     @IBOutlet weak var operationsSaveButton: UIButton!
     
@@ -28,7 +29,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var userName: String?
     var userDescription: String?
     var profileImage: UIImage?
-    
+    var startSave = false
     @IBAction func changePhotoClicked(_ sender: Any) {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -111,13 +112,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         operationsSaveButton.layer.cornerRadius = (14 / 40) * operationsSaveButton.layer.bounds.height
         imagePicker.delegate = self
         setColors()
+        profileEditButton.layer.cornerRadius = 5
+        profileEditButton.layer.borderWidth = 1
         gcdManager = GCDDataManager { [weak self] fault in
             DispatchQueue.main.async {
                 if fault {
                     let alert = UIAlertController(title: "Ошибка", message: "Не удалось сохранить данные", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default) {_ in
-                        self?.editButton.isEnabled = true
-                        self?.saveButtonOn()
+//                        self?.editButton.isEnabled = true
+//                        self?.saveButtonOn()
+                        self?.endWriting()
                     })
                     alert.addAction(UIAlertAction(title: "Повторить", style: .default) {_ in
                         self?.gcdSave("sender")
@@ -137,8 +141,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                     OperationQueue.main.addOperation {
                         let alert = UIAlertController(title: "Ошибка", message: "Не удалось сохранить данные", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
-                            self?.editButton.isEnabled = true
-                            self?.saveButtonOn()
+//                            self?.editButton.isEnabled = true
+//                            self?.saveButtonOn()
+                            self?.endWriting()
                         })
                         alert.addAction(UIAlertAction(title: "Повторить", style: .default) { _ in
                             self?.operationsSave("sender")
@@ -182,6 +187,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         //        }
     }
     func showSaveDoneAlert() {
+        endWriting()
         let alert = UIAlertController(title: "Данные сохранены", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -194,7 +200,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             destination.delegate = self
         }
     }
+    var edited = false
     @IBAction func editProfile(_ sender: Any) {
+        let x = profileEditButton.layer.position.x
+        let y = profileEditButton.layer.position.y
         userNameField.isEnabled = !userNameField.isEnabled
         descriptionView.isEditable = !descriptionView.isEditable
         if userNameField.isEnabled {
@@ -202,6 +211,52 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         } else {
             userNameField.borderStyle = .none
         }
+        UIView.animateKeyframes(withDuration: 0.3, delay: 0, options: [.repeat, .allowUserInteraction], animations: {
+            if !self.edited {
+                self.edited = true
+                UIView.addKeyframe(withRelativeStartTime: 0.0,
+                                   relativeDuration: 0.2) {
+                                    self.profileEditButton.layer.position.x = x + 5
+                                    self.profileEditButton.layer.position.y = y + 5
+                                    self.profileEditButton.transform = CGAffineTransform(rotationAngle: 18 * (CGFloat.pi / 180))
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.2,
+                                   relativeDuration: 0.2) {
+                                    self.profileEditButton.layer.position.y = y - 5
+                                    //self.button.layer.position.y=y+5;
+                                    
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.4,
+                                   relativeDuration: 0.2) {
+                                    self.profileEditButton.layer.position.y = y - 5
+                                    self.profileEditButton.layer.position.x = x - 5
+                                    self.profileEditButton.transform = CGAffineTransform(rotationAngle: -18 * (CGFloat.pi / 180))
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.6,
+                                   relativeDuration: 0.2) {
+                                    self.profileEditButton.layer.position.y = y + 5
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.8,
+                                   relativeDuration: 0.2) {
+                                    self.profileEditButton.layer.position.y = y
+                                    self.profileEditButton.layer.position.x = x
+                                    self.profileEditButton.transform = CGAffineTransform(rotationAngle: 0)
+                }
+                
+            } else {
+                
+                self.edited = false
+                UIView.addKeyframe(withRelativeStartTime: 0.0,
+                                   relativeDuration: 1) {
+                                    self.profileEditButton.layer.removeAllAnimations()
+                                    self.profileEditButton.layer.position.y = y
+                                    self.profileEditButton.layer.position.x = x
+                                    self.profileEditButton.transform = CGAffineTransform(rotationAngle: 0)
+                }
+                
+            }
+            
+        }, completion: nil)
     }
     @IBAction func didEditUsername(_ sender: Any) {
         checkChanges()
@@ -211,7 +266,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         checkChanges()
     }
     func checkChanges() {
-        if userNameField.text != userName || descriptionView.text != userDescription || image.image != profileImage {
+        if (userNameField.text != userName || descriptionView.text != userDescription || image.image != profileImage) && !startSave {
             saveButtonOn()
         } else {
             saveButtonsOff()
@@ -219,7 +274,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     func setColors() {
-        
+        profileEditButton.layer.borderColor = RootAssembly.serviceAssembly.theme.currentTheme().textColor.cgColor
         view.backgroundColor = RootAssembly.serviceAssembly.theme.currentTheme().mainColor
         userNameField.textColor = RootAssembly.serviceAssembly.theme.currentTheme().textColor
         userNameField.backgroundColor = RootAssembly.serviceAssembly.theme.currentTheme().mainColor
@@ -243,29 +298,34 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let saveName: String? = userNameField.text == userName ? nil : userNameField.text
         let saveDescription: String? = descriptionView.text == userDescription ? nil : descriptionView.text
         gcdManager.write(name: saveName, description: saveDescription, image: image.image)
-        endWriting()
+        //endWriting()
         
     }
     
     @IBAction func operationsSave(_ sender: Any) {
         startWriting()
         operationManager.write(name: userNameField.text ?? "", description: descriptionView.text ?? "", image: image.image)
-        endWriting()
+        //endWriting()
     }
     func startWriting() {
-        editButton.isEnabled = false
+        startSave = true
         saveButtonsOff()
+        edited = false
+        profileEditButton.layer.removeAllAnimations()
+        profileEditButton.isEnabled = false
         userNameField.isEnabled = false
         descriptionView.isEditable = false
         dataIndicator.isHidden = false
         dataIndicator.startAnimating()
     }
     func endWriting() {
+        startSave = false
         dataIndicator.stopAnimating()
         dataIndicator.isHidden = true
-        editButton.isEnabled = true
+        profileEditButton.isEnabled = true
         userDescription = descriptionView.text
         userName = userNameField.text
         profileImage = image.image
     }
+    
 }

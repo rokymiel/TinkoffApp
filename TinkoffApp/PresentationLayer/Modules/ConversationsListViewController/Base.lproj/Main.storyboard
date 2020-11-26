@@ -78,7 +78,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHn-Bq-v9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0ls-TG-f6k">
                     <connections>
-                        <segue destination="obm-t6-Bcn" kind="presentation" id="dTv-2v-LXb"/>
+                        <segue destination="obm-t6-Bcn" kind="replace" customClass="MyCustomSegue" customModule="TinkoffApp" customModuleProvider="target" splitViewControllerTargetIndex="1" id="EWl-M7-hsL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -107,7 +107,9 @@
         <!--ProfileView-->
         <scene sceneID="aUI-HN-FZD">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileView" id="obm-t6-Bcn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileView" id="obm-t6-Bcn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aYM-j1-9D1"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0I-iy-wTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1484" y="128"/>

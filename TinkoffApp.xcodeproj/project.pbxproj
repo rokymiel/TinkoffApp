@@ -37,6 +37,8 @@
 		7D755F0325409C1C009282BD /* UserIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D755F0225409C1C009282BD /* UserIDManager.swift */; };
 		7D7C919525193283003D479C /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C919425193283003D479C /* ProfileView.storyboard */; };
 		7D7C9197251932D5003D479C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C9196251932D5003D479C /* ProfileViewController.swift */; };
+		7D872B52256F76A100BDB3DB /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D872B51256F76A100BDB3DB /* CustomTransition.swift */; };
+		7D872B54256F772800BDB3DB /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D872B53256F772800BDB3DB /* CustomSegue.swift */; };
 		7D9BD55A251124FB00C7EFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */; };
 		7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9BD562251124FE00C7EFE8 /* Assets.xcassets */; };
 		7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BD5912511367400C7EFE8 /* Logger.swift */; };
@@ -94,6 +96,8 @@
 		7D755F0225409C1C009282BD /* UserIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManager.swift; sourceTree = "<group>"; };
 		7D7C919425193283003D479C /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 		7D7C9196251932D5003D479C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7D872B51256F76A100BDB3DB /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		7D872B53256F772800BDB3DB /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9BD559251124FB00C7EFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9BD560251124FB00C7EFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -420,6 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */,
+				7D872B51256F76A100BDB3DB /* CustomTransition.swift */,
+				7D872B53256F772800BDB3DB /* CustomSegue.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -587,12 +593,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D592B78254B156C008B90EC /* CoreDataStackAsync.swift in Sources */,
+				7D872B52256F76A100BDB3DB /* CustomTransition.swift in Sources */,
 				7D678F4A2564269F003ABBAB /* CodableParser.swift in Sources */,
 				7D19305C2523BDE200227843 /* MessageCellModel.swift in Sources */,
 				7DA8520F255CB1020067448A /* ChatModel.swift in Sources */,
 				7D678F46256423E8003ABBAB /* IRequest.swift in Sources */,
 				7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */,
 				7D678F482564240C003ABBAB /* IParser.swift in Sources */,
+				7D872B54256F772800BDB3DB /* CustomSegue.swift in Sources */,
 				7D19304E25235C4A00227843 /* ConversationsListViewController.swift in Sources */,
 				7D1930552523A51D00227843 /* ConversationViewController.swift in Sources */,
 				7D9BD5922511367400C7EFE8 /* Logger.swift in Sources */,
