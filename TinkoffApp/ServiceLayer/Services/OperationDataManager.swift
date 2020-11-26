@@ -40,7 +40,6 @@ class DataReadOperation: Operation {
     public var userDescription: String?
     public var image: UIImage?
     override func main() {
-        
         username = manager?.read(path: DataManager.usernamePath)
         userDescription = manager?.read(path: DataManager.userDesriptionPath)
         image = manager?.readImage()

@@ -39,16 +39,16 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pht-g3-V9B">
-                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
                                             <color key="backgroundColor" red="0.89411764705882346" green="0.90980392156862744" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="44" id="3Z7-o2-37P"/>
                                                 <constraint firstAttribute="height" constant="44" id="FQS-Z4-1oK"/>
+                                                <constraint firstAttribute="width" constant="45" id="g18-yv-JqY"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-c6-XjJ">
-                                            <rect key="frame" x="9" y="12" width="26" height="20"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="10" y="12" width="25" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.21176470588235294" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,7 +78,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHn-Bq-v9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0ls-TG-f6k">
                     <connections>
-                        <segue destination="obm-t6-Bcn" kind="presentation" id="dTv-2v-LXb"/>
+                        <segue destination="obm-t6-Bcn" kind="show" customClass="MyCustomSegue" customModule="TinkoffApp" customModuleProvider="target" id="EWl-M7-hsL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -107,7 +107,9 @@
         <!--ProfileView-->
         <scene sceneID="aUI-HN-FZD">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileView" id="obm-t6-Bcn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileView" id="obm-t6-Bcn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aYM-j1-9D1"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0I-iy-wTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1484" y="128"/>

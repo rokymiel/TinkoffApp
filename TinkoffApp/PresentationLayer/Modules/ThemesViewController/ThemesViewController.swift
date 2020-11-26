@@ -26,7 +26,6 @@ class ThemesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        
         setViewsLayer()
         switch RootAssembly.serviceAssembly.theme.currentTheme() {
         case .classic:

@@ -20,8 +20,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="Profile" largeTitleDisplayMode="never" id="mlE-YE-kqk">
-                                        <barButtonItem key="leftBarButtonItem" id="eKM-Ar-KBG">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ae6-cQ-40d">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" id="eKM-Ar-KBG">
+                                            <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ae6-cQ-40d">
                                                 <rect key="frame" x="16" y="13" width="80" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Edit"/>
@@ -93,7 +93,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MOZ-I2-uuq">
-                                <rect key="frame" x="67.666666666666686" y="453.33333333333331" width="240" height="185.66666666666669"/>
+                                <rect key="frame" x="67.666666666666686" y="453.33333333333331" width="240" height="137.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Rdw-ac-KYf"/>
                                 </constraints>
@@ -103,6 +103,7 @@
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRa-Zu-geB">
                                 <rect key="frame" x="67.666666666666686" y="373" width="240" height="29"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="ETo-Xg-RcH"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="qWR-fD-qXt"/>
@@ -142,8 +143,20 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XuW-9J-sHZ">
                                 <rect key="frame" x="177.66666666666666" y="352" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-MC-u1i">
+                                <rect key="frame" x="172.66666666666666" y="610" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2k6-P4-7j0"/>
+                                    <constraint firstAttribute="height" constant="30" id="oCP-Dk-i50"/>
+                                </constraints>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editProfile:" destination="xVl-Po-aso" eventType="touchUpInside" id="anD-96-Iyl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3Aj-fy-eZr" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="81X-Fi-2r2"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="leading" secondItem="7Rm-RV-F9D" secondAttribute="leading" id="D2k-Gv-BEy"/>
@@ -153,12 +166,14 @@
                             <constraint firstItem="qRa-Zu-geB" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="IDx-nd-2qS"/>
                             <constraint firstItem="XuW-9J-sHZ" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="Iwj-7h-Hh2"/>
                             <constraint firstItem="EDd-Ga-bEp" firstAttribute="top" secondItem="qRa-Zu-geB" secondAttribute="bottom" constant="32" id="JYO-C5-TcG"/>
+                            <constraint firstItem="8UG-PL-VoH" firstAttribute="top" secondItem="Rbr-MC-u1i" secondAttribute="bottom" constant="19" id="LLb-gA-Rk4"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="trailing" secondItem="7Rm-RV-F9D" secondAttribute="trailing" id="Pg2-Xe-bLm"/>
+                            <constraint firstItem="Rbr-MC-u1i" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="UEO-TF-8j4"/>
                             <constraint firstItem="XuW-9J-sHZ" firstAttribute="centerY" secondItem="7Rm-RV-F9D" secondAttribute="centerY" id="V1e-vq-lBp"/>
-                            <constraint firstItem="8UG-PL-VoH" firstAttribute="top" secondItem="MOZ-I2-uuq" secondAttribute="bottom" constant="20" id="WCA-pe-zxf"/>
                             <constraint firstItem="7Rm-RV-F9D" firstAttribute="bottom" secondItem="8UG-PL-VoH" secondAttribute="bottom" constant="30" id="XOU-a2-ia7"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="top" secondItem="7Rm-RV-F9D" secondAttribute="top" id="adM-3r-hcg"/>
                             <constraint firstItem="3Aj-fy-eZr" firstAttribute="top" secondItem="bVv-2O-42C" secondAttribute="bottom" constant="45" id="kpy-NI-Kty"/>
+                            <constraint firstItem="Rbr-MC-u1i" firstAttribute="top" secondItem="MOZ-I2-uuq" secondAttribute="bottom" constant="19" id="kub-cx-0Oa"/>
                             <constraint firstItem="7Rm-RV-F9D" firstAttribute="trailing" secondItem="8UG-PL-VoH" secondAttribute="trailing" constant="40" id="vAq-Br-bvW"/>
                             <constraint firstItem="8UG-PL-VoH" firstAttribute="leading" secondItem="7Rm-RV-F9D" secondAttribute="leading" constant="40" id="yWy-YT-3np"/>
                             <constraint firstItem="qRa-Zu-geB" firstAttribute="top" secondItem="3Aj-fy-eZr" secondAttribute="bottom" constant="32" id="yf9-1B-a0g"/>
@@ -174,6 +189,7 @@
                         <outlet property="gcdSaveButton" destination="rCb-8G-VAm" id="vHO-hB-IUi"/>
                         <outlet property="image" destination="LJd-Mq-g86" id="v0V-bJ-iY4"/>
                         <outlet property="operationsSaveButton" destination="bYc-tw-MJk" id="gBO-nf-6Nu"/>
+                        <outlet property="profileEditButton" destination="Rbr-MC-u1i" id="ZgW-Am-zf4"/>
                         <outlet property="profileView" destination="3Aj-fy-eZr" id="NKl-2p-IPW"/>
                         <outlet property="userNameField" destination="qRa-Zu-geB" id="Ms7-tD-fIZ"/>
                         <segue destination="q4L-Z3-ibc" kind="presentation" identifier="toImagesView" id="4L8-sV-Pok"/>
