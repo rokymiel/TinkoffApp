@@ -16,7 +16,6 @@ class GCDDataManager: DataManager, DataSaverProtocol {
             let group = DispatchGroup()
             group.enter()
             DispatchQueue.global().async {
-                sleep(5)
                 if let userName = name {
                     self.write(data: userName, filePath: DataManager.usernamePath)
                     

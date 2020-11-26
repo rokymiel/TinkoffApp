@@ -14,10 +14,10 @@ class MyCustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using
         transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
-        let toView = transitionContext.view(forKey: .to)!
+        if let toView = transitionContext.view(forKey: .to) {
         //let fromView = transitionContext.view(forKey: .from)!
-        let fromVC = transitionContext.viewController(forKey: .from)!
-        let toVC = transitionContext.viewController(forKey: .to)!
+//        let fromVC = transitionContext.viewController(forKey: .from)!
+//        let toVC = transitionContext.viewController(forKey: .to)!
         containerView.addSubview(toView)
         toView.alpha = 0.0
         let x = toView.center.x
@@ -39,6 +39,8 @@ class MyCustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
 //                       completion: { _ in
 //                        transitionContext.completeTransition(true) })
         
+        }
+        
     }
     
 }
@@ -48,11 +50,11 @@ class MyCustomDismisser: NSObject, UIViewControllerAnimatedTransitioning {
         return 1.5 }
     func animateTransition(using
         transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView
+        //let containerView = transitionContext.containerView
         //let toView = transitionContext.view(forKey: .to)!
-        let fromView = transitionContext.view(forKey: .from)!
-        let fromVC = transitionContext.viewController(forKey: .from)!
-        let toVC = transitionContext.viewController(forKey: .to)!
+        //let fromView = transitionContext.view(forKey: .from)!
+        if let fromVC = transitionContext.viewController(forKey: .from) {
+        //let toVC = transitionContext.viewController(forKey: .to)!
         fromVC.removeFromParent()//.removeFromSuperview()
         fromVC.view.alpha = 1.0
         UIView.animate(withDuration: 1.5,
@@ -60,6 +62,8 @@ class MyCustomDismisser: NSObject, UIViewControllerAnimatedTransitioning {
                         fromVC.view.alpha = 0.0 },
                        completion: { _ in
                         transitionContext.completeTransition(true) })
+            
+        }
         
     }
 }

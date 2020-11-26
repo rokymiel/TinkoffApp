@@ -144,7 +144,11 @@
                                 <rect key="frame" x="177.66666666666666" y="352" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-MC-u1i">
-                                <rect key="frame" x="173" y="610" width="30" height="30"/>
+                                <rect key="frame" x="172.66666666666666" y="610" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2k6-P4-7j0"/>
+                                    <constraint firstAttribute="height" constant="30" id="oCP-Dk-i50"/>
+                                </constraints>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="editProfile:" destination="xVl-Po-aso" eventType="touchUpInside" id="anD-96-Iyl"/>
@@ -157,7 +161,6 @@
                             <constraint firstItem="3Aj-fy-eZr" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="81X-Fi-2r2"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="leading" secondItem="7Rm-RV-F9D" secondAttribute="leading" id="D2k-Gv-BEy"/>
                             <constraint firstItem="EDd-Ga-bEp" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="EYI-aY-dDJ"/>
-                            <constraint firstItem="Rbr-MC-u1i" firstAttribute="leading" secondItem="7Rm-RV-F9D" secondAttribute="leading" constant="173" id="FGm-28-gRW"/>
                             <constraint firstItem="MOZ-I2-uuq" firstAttribute="top" secondItem="EDd-Ga-bEp" secondAttribute="bottom" id="FkQ-aq-h7N"/>
                             <constraint firstItem="MOZ-I2-uuq" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="GcL-0K-dxZ"/>
                             <constraint firstItem="qRa-Zu-geB" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="IDx-nd-2qS"/>
@@ -165,9 +168,9 @@
                             <constraint firstItem="EDd-Ga-bEp" firstAttribute="top" secondItem="qRa-Zu-geB" secondAttribute="bottom" constant="32" id="JYO-C5-TcG"/>
                             <constraint firstItem="8UG-PL-VoH" firstAttribute="top" secondItem="Rbr-MC-u1i" secondAttribute="bottom" constant="19" id="LLb-gA-Rk4"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="trailing" secondItem="7Rm-RV-F9D" secondAttribute="trailing" id="Pg2-Xe-bLm"/>
+                            <constraint firstItem="Rbr-MC-u1i" firstAttribute="centerX" secondItem="7Rm-RV-F9D" secondAttribute="centerX" id="UEO-TF-8j4"/>
                             <constraint firstItem="XuW-9J-sHZ" firstAttribute="centerY" secondItem="7Rm-RV-F9D" secondAttribute="centerY" id="V1e-vq-lBp"/>
                             <constraint firstItem="7Rm-RV-F9D" firstAttribute="bottom" secondItem="8UG-PL-VoH" secondAttribute="bottom" constant="30" id="XOU-a2-ia7"/>
-                            <constraint firstItem="7Rm-RV-F9D" firstAttribute="trailing" secondItem="Rbr-MC-u1i" secondAttribute="trailing" constant="172" id="ZQg-4V-sxb"/>
                             <constraint firstItem="bVv-2O-42C" firstAttribute="top" secondItem="7Rm-RV-F9D" secondAttribute="top" id="adM-3r-hcg"/>
                             <constraint firstItem="3Aj-fy-eZr" firstAttribute="top" secondItem="bVv-2O-42C" secondAttribute="bottom" constant="45" id="kpy-NI-Kty"/>
                             <constraint firstItem="Rbr-MC-u1i" firstAttribute="top" secondItem="MOZ-I2-uuq" secondAttribute="bottom" constant="19" id="kub-cx-0Oa"/>

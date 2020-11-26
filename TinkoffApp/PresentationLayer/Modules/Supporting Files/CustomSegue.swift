@@ -8,7 +8,7 @@
 
 import UIKit
 class MyCustomSegue: UIStoryboardSegue {
-    private var selfRetainer: MyCustomSegue? = nil
+    private var selfRetainer: MyCustomSegue?
     override func perform() {
         destination.transitioningDelegate = self
         selfRetainer = self

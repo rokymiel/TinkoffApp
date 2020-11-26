@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         emitterCell.scale = 0.03
         emitterCell.lifetime = 30.0
         emitterCell.alphaSpeed = 0.1
-        emitterCell.emissionRange = .pi*2
+        emitterCell.emissionRange = .pi * 2
         emitterCell.birthRate = 2
         emitterCell.velocity = 150
         emitterLayer.emitterCells = [emitterCell]
