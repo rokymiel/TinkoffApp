@@ -8,16 +8,19 @@
 
 import  UIKit
 
-class GCDDataManager: DataManager, DataSaverProtocol {
-    
+class GCDDataManager: DataSaverProtocol {
+    private var dataManager: DataManagerProtocol
+    init(dataManager: DataManagerProtocol) {
+        self.dataManager = dataManager
+    }
     public func write(name: String?, description: String?, image: UIImage?) {
-        hasErrors = false
+        dataManager.hasErrors = false
         DispatchQueue.global().async {
             let group = DispatchGroup()
             group.enter()
             DispatchQueue.global().async {
                 if let userName = name {
-                    self.write(data: userName, filePath: DataManager.usernamePath)
+                    self.dataManager.write(data: userName, filePath: DataManager.usernamePath)
                     
                 }
                 group.leave()
@@ -25,21 +28,21 @@ class GCDDataManager: DataManager, DataSaverProtocol {
             group.enter()
             DispatchQueue.global().async {
                 if let userDescription = description {
-                    self.write(data: userDescription, filePath: DataManager.userDesriptionPath)
+                    self.dataManager.write(data: userDescription, filePath: DataManager.userDesriptionPath)
                 }
                 group.leave()
             }
             group.enter()
             DispatchQueue.global().async {
                 if let data = image?.pngData() {
-                    self.writeImage(data: data)
+                    self.dataManager.writeImage(data: data)
                 } else {
-                    self.delete(fileName: DataManager.imagePath)
+                    self.dataManager.delete(fileName: DataManager.imagePath)
                 }
                 group.leave()
             }
             group.wait()
-            self.completionBlock?(self.hasErrors)
+            self.dataManager.completionBlock?(self.dataManager.hasErrors)
             
         }
     }
@@ -51,19 +54,19 @@ class GCDDataManager: DataManager, DataSaverProtocol {
             var image: UIImage?
             group.enter()
             DispatchQueue.global().async {
-                username = self.read(path: DataManager.usernamePath)
+                username = self.dataManager.read(path: DataManager.usernamePath)
                 group.leave()
             }
             group.enter()
             DispatchQueue.global().async {
                 
-                userDescription = self.read(path: DataManager.userDesriptionPath)
+                userDescription = self.dataManager.read(path: DataManager.userDesriptionPath)
                 group.leave()
             }
             group.enter()
             DispatchQueue.global().async {
                 
-                image = self.readImage()
+                image = self.dataManager.readImage()
                 group.leave()
             }
             group.wait()

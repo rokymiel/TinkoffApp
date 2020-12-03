@@ -16,12 +16,15 @@ protocol DataSaverProtocol {
 }
 
 protocol DataManagerProtocol {
+    typealias Completion = (_ fault: Bool) -> Void
     func checkDirectory(_ path: String) -> String?
     func writeImage(data: Data)
     func readImage() -> UIImage?
     func delete(fileName: String)
     func write(data: String, filePath: String)
     func read(path: String) -> String
+    var completionBlock: Completion? { get }
+    var hasErrors: Bool { get set }
 }
 
 class DataManager: DataManagerProtocol {
@@ -30,7 +33,6 @@ class DataManager: DataManagerProtocol {
     static let usernamePath = "ussernam.txt"
     static let userDesriptionPath="description.txt"
     static let imagePath="profileImage.png"
-    typealias Completion = (_ fault: Bool) -> Void
     var completionBlock: Completion?
     public  func checkDirectory(_ path: String) -> String? {
         do {

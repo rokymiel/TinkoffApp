@@ -115,7 +115,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         setColors()
         profileEditButton.layer.cornerRadius = 5
         profileEditButton.layer.borderWidth = 1
-        gcdManager = GCDDataManager { [weak self] fault in
+        gcdManager = GCDDataManager(dataManager: DataManager { [weak self] fault in
             DispatchQueue.main.async {
                 if fault {
                     let alert = UIAlertController(title: "Ошибка", message: "Не удалось сохранить данные", preferredStyle: .alert)
@@ -135,7 +135,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
             }
             
-        }
+        })
         operationManager = OperationDataManager { [weak self] fault in
             DispatchQueue.main.async {
                 if fault {

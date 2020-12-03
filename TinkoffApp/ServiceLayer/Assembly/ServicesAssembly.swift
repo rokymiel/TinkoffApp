@@ -18,6 +18,6 @@ protocol IServicesAssembly {
 class ServicesAssembly: IServicesAssembly {
     lazy var theme: ThemeManagerProtocol = ThemeManager(RootAssembly.coreAssembly.themeSaver)
     lazy var userID: UserIDProtocol = UserIDManager(RootAssembly.coreAssembly.userIDSaver)
-    lazy var coreData: CoreDataManagerProtocol = CoreDataManager()
+    lazy var coreData: CoreDataManagerProtocol = CoreDataManager(dataStack: RootAssembly.coreAssembly.dataStack)
     lazy var net: NetManagerProtocol = NetManager(requestSender: RootAssembly.coreAssembly.requestSender)
 }

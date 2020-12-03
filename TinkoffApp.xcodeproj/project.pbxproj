@@ -68,6 +68,7 @@
 		7DC4931B2577CFB900D361ED /* ThemeSaverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */; };
 		7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */; };
 		7DDE19FB257932A50001209B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE19FA257932A50001209B /* Theme.swift */; };
+		7DDE19FF257967FF0001209B /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE19FE257967FF0001209B /* DataManagerMock.swift */; };
 		A1E58E10EA8C6E9A637FA558 /* Pods_TinkoffApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162272FA29550287C5B7CC60 /* Pods_TinkoffApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSaverMock.swift; sourceTree = "<group>"; };
 		7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7DDE19FA257932A50001209B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7DDE19FE257967FF0001209B /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
 		8A72A76159465E9FE9AD4ADE /* Pods-TinkoffAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffAppTests.release.xcconfig"; path = "Target Support Files/Pods-TinkoffAppTests/Pods-TinkoffAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A03CBAFF21F65724AAFB0499 /* Pods-TinkoffApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D185DB1554DE31DB1EFD7DBF /* Pods-TinkoffApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.release.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */,
 				7D174E612577DE1D00F0FC5F /* UserIDSaverMock.swift */,
 				7D174E632577E5EB00F0FC5F /* RequestSenderMock.swift */,
+				7DDE19FE257967FF0001209B /* DataManagerMock.swift */,
 			);
 			path = TinkoffAppTests;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				7DC4931B2577CFB900D361ED /* ThemeSaverMock.swift in Sources */,
 				7D174E642577E5EB00F0FC5F /* RequestSenderMock.swift in Sources */,
 				7D174E622577DE1D00F0FC5F /* UserIDSaverMock.swift in Sources */,
+				7DDE19FF257967FF0001209B /* DataManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,14 +10,6 @@ import XCTest
 
 class TinkoffAppTests: XCTestCase {
     
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
     func testThemeManager() throws {
         //Arange
         let themeSaver = ThemeSaverMock()
@@ -91,6 +83,33 @@ class TinkoffAppTests: XCTestCase {
         XCTAssertEqual(requestSenderWithSucces.model, succesSecondResult)
         XCTAssertEqual(requestSenderWithSucces.callsCount, 1)
         
+    }
+    func testGCDDataManager() throws {
+        //Arange
+        let dataManager = DataManagerMock {  fault in
+            XCTAssertFalse(fault)
+        }
+        let gcdDataManager = GCDDataManager(dataManager: dataManager)
+        let userName = "Bob"
+        let description = "Description"
+        let imageProfile = UIImage(named: "tinkoff")
+        
+        //Act
+        gcdDataManager.write(name: userName, description: description, image: imageProfile)
+        sleep(1)
+        //Assert
+        gcdDataManager.read { name, decr, image  in
+            XCTAssertEqual(userName, name)
+            XCTAssertEqual(description, decr)
+            XCTAssertNotNil(image)
+            XCTAssertEqual(dataManager.readCallsCount, 2)
+            XCTAssertEqual(dataManager.writeCallsCount, 2)
+            XCTAssertEqual(dataManager.checkDirectoryCallsCount, 0)
+            XCTAssertEqual(dataManager.deleteCallsCount, 0)
+            XCTAssertEqual(dataManager.writeImageCallsCount, 1)
+            XCTAssertEqual(dataManager.readImageCallsCount, 1)
+        }
+        sleep(1)
     }
     
 }

@@ -19,8 +19,11 @@ protocol CoreDataManagerProtocol {
 }
 class CoreDataManager: CoreDataManagerProtocol {
     
-    private var coreDataStack: CoreDataStackProtocol = RootAssembly.coreAssembly.dataStack
-    private  var coreAsync: CoreDataStackAsyncProtocol = RootAssembly.coreAssembly.dataStackAsync
+    private var coreDataStack: CoreDataStackProtocol
+    //private  var coreAsync: CoreDataStackAsyncProtocol = RootAssembly.coreAssembly.dataStackAsync
+    init(dataStack: CoreDataStackProtocol) {
+        coreDataStack = dataStack
+    }
     /**
      Сохраняем каналы
      
