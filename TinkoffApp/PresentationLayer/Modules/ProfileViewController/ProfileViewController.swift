@@ -102,8 +102,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         logSaveButton()
     }
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        userNameField.accessibilityIdentifier = "profileUserNameField"
+        descriptionView.accessibilityIdentifier = "profileDescriptionView"
         logSaveButton()
         descriptionView.delegate = self
         profileView.layer.cornerRadius = profileView.layer.bounds.height / 2
