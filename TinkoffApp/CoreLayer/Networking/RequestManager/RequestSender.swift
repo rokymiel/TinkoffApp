@@ -14,7 +14,7 @@ struct RequestConfig<Parser> where Parser: IParser {
 }
 
 protocol IRequestSender {
-    func send<Parser>(requestConfig: RequestConfig<Parser>,
+    func send<Parser>(requestConfig config: RequestConfig<Parser>,
                       completionHandler: @escaping(Result<Parser.Model, NetworkError>) -> Void)
 }
 enum NetworkError: Error {

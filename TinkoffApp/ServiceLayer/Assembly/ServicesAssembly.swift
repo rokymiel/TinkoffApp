@@ -16,8 +16,8 @@ protocol IServicesAssembly {
 }
 
 class ServicesAssembly: IServicesAssembly {
-    lazy var theme: ThemeManagerProtocol = ThemeManager()
-    lazy var userID: UserIDProtocol = UserIDManager()
+    lazy var theme: ThemeManagerProtocol = ThemeManager(RootAssembly.coreAssembly.themeSaver)
+    lazy var userID: UserIDProtocol = UserIDManager(RootAssembly.coreAssembly.userIDSaver)
     lazy var coreData: CoreDataManagerProtocol = CoreDataManager()
     lazy var net: NetManagerProtocol = NetManager(requestSender: RootAssembly.coreAssembly.requestSender)
 }

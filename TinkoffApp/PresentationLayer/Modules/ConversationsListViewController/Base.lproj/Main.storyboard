@@ -46,8 +46,9 @@
                                                 <constraint firstAttribute="width" constant="45" id="g18-yv-JqY"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-c6-XjJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-c6-XjJ" userLabel="userName">
                                             <rect key="frame" x="10" y="12" width="25" height="20"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="userName" label="userName"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.21176470588235294" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -62,6 +63,9 @@
                                         <constraint firstItem="pht-g3-V9B" firstAttribute="leading" secondItem="nyI-1d-0jF" secondAttribute="leading" id="o0Z-6i-eZa"/>
                                         <constraint firstAttribute="bottom" secondItem="pht-g3-V9B" secondAttribute="bottom" id="pY9-tc-Pqc"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="profileName"/>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="0ls-TG-f6k" appends="YES" id="A6W-FE-mh6"/>
                                     </connections>

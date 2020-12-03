@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AADFEEE25A5A12E157F282 /* Pods_TinkoffAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F10FDC2C07F24CF7CCDE47 /* Pods_TinkoffAppTests.framework */; };
+		7D174E622577DE1D00F0FC5F /* UserIDSaverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D174E612577DE1D00F0FC5F /* UserIDSaverMock.swift */; };
+		7D174E642577E5EB00F0FC5F /* RequestSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D174E632577E5EB00F0FC5F /* RequestSenderMock.swift */; };
 		7D19304425234B7200227843 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304325234B7200227843 /* ConversationCellModel.swift */; };
 		7D19304725234C1700227843 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304625234C1700227843 /* ConfigurableView.swift */; };
 		7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19304825234CB000227843 /* ConversationViewCell.swift */; };
@@ -19,6 +22,7 @@
 		7D1C9E9A25655BA200362DD6 /* ImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C9E9925655BA200362DD6 /* ImageCellModel.swift */; };
 		7D1C9E9E2565607200362DD6 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C9E9C2565607200362DD6 /* ImageCell.swift */; };
 		7D1C9E9F2565607200362DD6 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C9E9D2565607200362DD6 /* ImageCell.xib */; };
+		7D228A7025785E750043E9C6 /* TinkoffAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D228A6F25785E750043E9C6 /* TinkoffAppUITests.swift */; };
 		7D592B702549B36B008B90EC /* Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B6E2549B36B008B90EC /* Chat.xcdatamodeld */; };
 		7D592B722549B986008B90EC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B712549B986008B90EC /* CoreDataStack.swift */; };
 		7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D592B732549C242008B90EC /* ObjectsExtensions.swift */; };
@@ -60,12 +64,35 @@
 		7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB00D78252D105400DE922A /* ThemesView.storyboard */; };
 		7DB00D7B252D1FFB00DE922A /* ThemesPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */; };
 		7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7D252D8B1100DE922A /* ThemeManager.swift */; };
+		7DC493132577CF7900D361ED /* TinkoffAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC493122577CF7900D361ED /* TinkoffAppTests.swift */; };
+		7DC4931B2577CFB900D361ED /* ThemeSaverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */; };
 		7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */; };
+		7DDE19FB257932A50001209B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE19FA257932A50001209B /* Theme.swift */; };
 		A1E58E10EA8C6E9A637FA558 /* Pods_TinkoffApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162272FA29550287C5B7CC60 /* Pods_TinkoffApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7D228A7225785E750043E9C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D9BD54E251124FB00C7EFE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D9BD555251124FB00C7EFE8;
+			remoteInfo = TinkoffApp;
+		};
+		7DC493152577CF7900D361ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D9BD54E251124FB00C7EFE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D9BD555251124FB00C7EFE8;
+			remoteInfo = TinkoffApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		162272FA29550287C5B7CC60 /* Pods_TinkoffApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinkoffApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		494E4E5FE7677CA2F14D1A58 /* Pods-TinkoffAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffAppTests/Pods-TinkoffAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D174E612577DE1D00F0FC5F /* UserIDSaverMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDSaverMock.swift; sourceTree = "<group>"; };
+		7D174E632577E5EB00F0FC5F /* RequestSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderMock.swift; sourceTree = "<group>"; };
 		7D19304325234B7200227843 /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
 		7D19304625234C1700227843 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		7D19304825234CB000227843 /* ConversationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +105,9 @@
 		7D1C9E9925655BA200362DD6 /* ImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellModel.swift; sourceTree = "<group>"; };
 		7D1C9E9C2565607200362DD6 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		7D1C9E9D2565607200362DD6 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		7D228A6D25785E750043E9C6 /* TinkoffAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D228A6F25785E750043E9C6 /* TinkoffAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffAppUITests.swift; sourceTree = "<group>"; };
+		7D228A7125785E750043E9C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D592B6F2549B36B008B90EC /* Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chat.xcdatamodel; sourceTree = "<group>"; };
 		7D592B712549B986008B90EC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7D592B732549C242008B90EC /* ObjectsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsExtensions.swift; sourceTree = "<group>"; };
@@ -121,17 +151,39 @@
 		7DB00D78252D105400DE922A /* ThemesView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThemesView.storyboard; sourceTree = "<group>"; };
 		7DB00D7A252D1FFB00DE922A /* ThemesPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesPickerDelegate.swift; sourceTree = "<group>"; };
 		7DB00D7D252D8B1100DE922A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		7DC493102577CF7900D361ED /* TinkoffAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DC493122577CF7900D361ED /* TinkoffAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffAppTests.swift; sourceTree = "<group>"; };
+		7DC493142577CF7900D361ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSaverMock.swift; sourceTree = "<group>"; };
 		7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		7DDE19FA257932A50001209B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8A72A76159465E9FE9AD4ADE /* Pods-TinkoffAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffAppTests.release.xcconfig"; path = "Target Support Files/Pods-TinkoffAppTests/Pods-TinkoffAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A03CBAFF21F65724AAFB0499 /* Pods-TinkoffApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.debug.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D185DB1554DE31DB1EFD7DBF /* Pods-TinkoffApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffApp.release.xcconfig"; path = "Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp.release.xcconfig"; sourceTree = "<group>"; };
+		D4F10FDC2C07F24CF7CCDE47 /* Pods_TinkoffAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinkoffAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D228A6A25785E750043E9C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D9BD553251124FB00C7EFE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A1E58E10EA8C6E9A637FA558 /* Pods_TinkoffApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DC4930D2577CF7900D361ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05AADFEEE25A5A12E157F282 /* Pods_TinkoffAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +195,8 @@
 			children = (
 				A03CBAFF21F65724AAFB0499 /* Pods-TinkoffApp.debug.xcconfig */,
 				D185DB1554DE31DB1EFD7DBF /* Pods-TinkoffApp.release.xcconfig */,
+				494E4E5FE7677CA2F14D1A58 /* Pods-TinkoffAppTests.debug.xcconfig */,
+				8A72A76159465E9FE9AD4ADE /* Pods-TinkoffAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -183,6 +237,15 @@
 				7D1C9E9D2565607200362DD6 /* ImageCell.xib */,
 			);
 			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		7D228A6E25785E750043E9C6 /* TinkoffAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D228A6F25785E750043E9C6 /* TinkoffAppUITests.swift */,
+				7D228A7125785E750043E9C6 /* Info.plist */,
+			);
+			path = TinkoffAppUITests;
 			sourceTree = "<group>";
 		};
 		7D592B6D2549B353008B90EC /* CoreData */ = {
@@ -246,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				7D9BD558251124FB00C7EFE8 /* TinkoffApp */,
+				7DC493112577CF7900D361ED /* TinkoffAppTests */,
+				7D228A6E25785E750043E9C6 /* TinkoffAppUITests */,
 				7D9BD557251124FB00C7EFE8 /* Products */,
 				02398CD07EE8DF27352A8C4B /* Pods */,
 				CCE0682EDC0CACC5B503DEA4 /* Frameworks */,
@@ -256,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */,
+				7DC493102577CF7900D361ED /* TinkoffAppTests.xctest */,
+				7D228A6D25785E750043E9C6 /* TinkoffAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,6 +375,7 @@
 		7DA851F2255C75080067448A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7DDE19F92579328F0001209B /* Enums */,
 				7D19304225234B4A00227843 /* Data Models */,
 			);
 			path = "Supporting Files";
@@ -443,10 +511,31 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		7DC493112577CF7900D361ED /* TinkoffAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DC493122577CF7900D361ED /* TinkoffAppTests.swift */,
+				7DC493142577CF7900D361ED /* Info.plist */,
+				7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */,
+				7D174E612577DE1D00F0FC5F /* UserIDSaverMock.swift */,
+				7D174E632577E5EB00F0FC5F /* RequestSenderMock.swift */,
+			);
+			path = TinkoffAppTests;
+			sourceTree = "<group>";
+		};
+		7DDE19F92579328F0001209B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7DDE19FA257932A50001209B /* Theme.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		CCE0682EDC0CACC5B503DEA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				162272FA29550287C5B7CC60 /* Pods_TinkoffApp.framework */,
+				D4F10FDC2C07F24CF7CCDE47 /* Pods_TinkoffAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -454,6 +543,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D228A6C25785E750043E9C6 /* TinkoffAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D228A7625785E750043E9C6 /* Build configuration list for PBXNativeTarget "TinkoffAppUITests" */;
+			buildPhases = (
+				7D228A6925785E750043E9C6 /* Sources */,
+				7D228A6A25785E750043E9C6 /* Frameworks */,
+				7D228A6B25785E750043E9C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D228A7325785E750043E9C6 /* PBXTargetDependency */,
+			);
+			name = TinkoffAppUITests;
+			productName = TinkoffAppUITests;
+			productReference = 7D228A6D25785E750043E9C6 /* TinkoffAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7D9BD555251124FB00C7EFE8 /* TinkoffApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D9BD56A251124FE00C7EFE8 /* Build configuration list for PBXNativeTarget "TinkoffApp" */;
@@ -474,6 +581,25 @@
 			productReference = 7D9BD556251124FB00C7EFE8 /* TinkoffApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7DC4930F2577CF7900D361ED /* TinkoffAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DC493172577CF7900D361ED /* Build configuration list for PBXNativeTarget "TinkoffAppTests" */;
+			buildPhases = (
+				47250889CC3C536F0BC51EFE /* [CP] Check Pods Manifest.lock */,
+				7DC4930C2577CF7900D361ED /* Sources */,
+				7DC4930D2577CF7900D361ED /* Frameworks */,
+				7DC4930E2577CF7900D361ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DC493162577CF7900D361ED /* PBXTargetDependency */,
+			);
+			name = TinkoffAppTests;
+			productName = TinkoffAppTests;
+			productReference = 7DC493102577CF7900D361ED /* TinkoffAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -484,8 +610,16 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Tinkoff;
 				TargetAttributes = {
+					7D228A6C25785E750043E9C6 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7D9BD555251124FB00C7EFE8;
+					};
 					7D9BD555251124FB00C7EFE8 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					7DC4930F2577CF7900D361ED = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7D9BD555251124FB00C7EFE8;
 					};
 				};
 			};
@@ -503,11 +637,20 @@
 			projectRoot = "";
 			targets = (
 				7D9BD555251124FB00C7EFE8 /* TinkoffApp */,
+				7DC4930F2577CF7900D361ED /* TinkoffAppTests */,
+				7D228A6C25785E750043E9C6 /* TinkoffAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D228A6B25785E750043E9C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D9BD554251124FB00C7EFE8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +666,13 @@
 				7D7C919525193283003D479C /* ProfileView.storyboard in Resources */,
 				7D9BD563251124FE00C7EFE8 /* Assets.xcassets in Resources */,
 				7DA851FC255C7C050067448A /* ConversationView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DC4930E2577CF7900D361ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +694,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinkoffApp/Pods-TinkoffApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47250889CC3C536F0BC51EFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinkoffAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D755EFF253F7D9D009282BD /* ShellScript */ = {
@@ -588,6 +760,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D228A6925785E750043E9C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D228A7025785E750043E9C6 /* TinkoffAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D9BD552251124FB00C7EFE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,6 +809,7 @@
 				7DA851F8255C78B80067448A /* RootAssembly.swift in Sources */,
 				7DB00D76252D0FF500DE922A /* ThemesViewController.swift in Sources */,
 				7DA85204255C833E0067448A /* RootNavigationViewController.swift in Sources */,
+				7DDE19FB257932A50001209B /* Theme.swift in Sources */,
 				7D592B742549C242008B90EC /* ObjectsExtensions.swift in Sources */,
 				7DA599A42536375900B0F078 /* GCDDataManager.swift in Sources */,
 				7D19304A25234CB000227843 /* ConversationViewCell.swift in Sources */,
@@ -638,7 +819,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DC4930C2577CF7900D361ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DC493132577CF7900D361ED /* TinkoffAppTests.swift in Sources */,
+				7DC4931B2577CFB900D361ED /* ThemeSaverMock.swift in Sources */,
+				7D174E642577E5EB00F0FC5F /* RequestSenderMock.swift in Sources */,
+				7D174E622577DE1D00F0FC5F /* UserIDSaverMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D228A7325785E750043E9C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D9BD555251124FB00C7EFE8 /* TinkoffApp */;
+			targetProxy = 7D228A7225785E750043E9C6 /* PBXContainerItemProxy */;
+		};
+		7DC493162577CF7900D361ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D9BD555251124FB00C7EFE8 /* TinkoffApp */;
+			targetProxy = 7DC493152577CF7900D361ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7D9BD55F251124FB00C7EFE8 /* Main.storyboard */ = {
@@ -660,6 +865,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D228A7425785E750043E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinkoffAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rokymiel.TinkoffAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinkoffApp;
+			};
+			name = Debug;
+		};
+		7D228A7525785E750043E9C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinkoffAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rokymiel.TinkoffAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinkoffApp;
+			};
+			name = Release;
+		};
 		7D9BD568251124FE00C7EFE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,9 +1055,70 @@
 			};
 			name = Release;
 		};
+		7DC493182577CF7900D361ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494E4E5FE7677CA2F14D1A58 /* Pods-TinkoffAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Pods/Headers/Public/**",
+					"$(SRCROOT)/Pods/Firebase/**",
+					"${SRCROOT}/Pods/Firebase/CoreOnly/Sources/**",
+				);
+				INFOPLIST_FILE = TinkoffAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rokymiel.TinkoffAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinkoffApp.app/TinkoffApp";
+			};
+			name = Debug;
+		};
+		7DC493192577CF7900D361ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A72A76159465E9FE9AD4ADE /* Pods-TinkoffAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Pods/Headers/Public/**",
+					"$(SRCROOT)/Pods/Firebase/**",
+					"${SRCROOT}/Pods/Firebase/CoreOnly/Sources/**",
+				);
+				INFOPLIST_FILE = TinkoffAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rokymiel.TinkoffAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinkoffApp.app/TinkoffApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D228A7625785E750043E9C6 /* Build configuration list for PBXNativeTarget "TinkoffAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D228A7425785E750043E9C6 /* Debug */,
+				7D228A7525785E750043E9C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7D9BD551251124FB00C7EFE8 /* Build configuration list for PBXProject "TinkoffApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -831,6 +1133,15 @@
 			buildConfigurations = (
 				7D9BD56B251124FE00C7EFE8 /* Debug */,
 				7D9BD56C251124FE00C7EFE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DC493172577CF7900D361ED /* Build configuration list for PBXNativeTarget "TinkoffAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DC493182577CF7900D361ED /* Debug */,
+				7DC493192577CF7900D361ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

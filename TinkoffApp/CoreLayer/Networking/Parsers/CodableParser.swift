@@ -7,9 +7,13 @@
 //
 
 import Foundation
-struct ResponseModel: Decodable {
+struct ResponseModel: Decodable, Equatable {
+    static func == (lhs: ResponseModel, rhs: ResponseModel) -> Bool {
+        return lhs.hits == rhs.hits
+    }
+    
     let hits: [Image]
-    struct Image: Decodable {
+    struct Image: Decodable, Equatable {
         let id: Int
         let webformatURL: String
     }
