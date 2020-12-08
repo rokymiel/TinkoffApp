@@ -15,8 +15,12 @@ class TinkoffAppUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         app.navigationBars["Channels"].staticTexts["userName"].tap()
-        XCTAssertTrue(app.textFields["profileUserNameField"].exists)
-        XCTAssertTrue(app.textViews["profileDescriptionView"].exists)
+        let profileUserNameField = app.textFields["profileUserNameField"]
+        let  profileDescriptionView = app.textViews["profileDescriptionView"]
+        _ = profileUserNameField.waitForExistence(timeout: 2)
+        _ = profileDescriptionView.waitForExistence(timeout: 2)
+        XCTAssertTrue(profileDescriptionView.exists)
+        XCTAssertTrue(profileUserNameField.exists)
         
     }
     
