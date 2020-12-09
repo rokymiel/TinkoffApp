@@ -5,14 +5,6 @@ lane :build_for_testing do
   scan(
     build_for_testing: true
   )
-end
-
-desc "Runs tests on an already compiled application"
-lane :test_without_building do
-  scan(
-    test_without_building: true
-  )
-
   webhook_url = ENV['DISCORD_WEBHOOK_URL']
   discord_user_id = ENV['DISCORD_USER_ID']
 
@@ -21,6 +13,13 @@ lane :test_without_building do
     title: "ThinkoffChatTest",
     description: "build ended",
     discord_user_id: discord_user_id
+  )
+end
+
+desc "Runs tests on an already compiled application"
+lane :test_without_building do
+  scan(
+    test_without_building: true
   )
 end
 
