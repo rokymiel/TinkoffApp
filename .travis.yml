@@ -3,7 +3,7 @@ osx_image: xcode11.6
 befor_install:
     - yes | gem update --system --force
     - gem install bundler
-    - gem install libsodium
+    - brew install libsodium
 install:
     - bundle install
 script:
