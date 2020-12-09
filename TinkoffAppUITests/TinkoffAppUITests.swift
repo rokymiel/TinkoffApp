@@ -14,7 +14,9 @@ class TinkoffAppUITests: XCTestCase {
         
         let app = XCUIApplication()
         app.launch()
-        app.navigationBars["Channels"].staticTexts["userName"].tap()
+        let userNameLabel = app.navigationBars["Channels"].staticTexts["userName"]
+        _ = userNameLabel.waitForExistence(timeout: 5)
+        userNameLabel.tap()
         let profileUserNameField = app.textFields["profileUserNameField"]
         let  profileDescriptionView = app.textViews["profileDescriptionView"]
         _ = profileUserNameField.waitForExistence(timeout: 5)
