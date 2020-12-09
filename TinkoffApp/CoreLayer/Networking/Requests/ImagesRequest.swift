@@ -13,7 +13,7 @@ class ImagesRequest: IRequest {
     init(apiKey: String) {
         key = apiKey
     }
-    private let baseURL = "https://pixabay.com/api/"
+    private let baseURL = Bundle.main.object(forInfoDictionaryKey: "Images_URL") as? String ?? ""
     private let imageType = "photo"
     private let perPage = "200"
     private let searchTerm = "yellow+flowers"

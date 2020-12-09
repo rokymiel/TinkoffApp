@@ -12,6 +12,16 @@ lane :test_without_building do
   scan(
     test_without_building: true
   )
+
+  webhook_url = ENV['DISCORD_WEBHOOK_URL']
+  discord_user_id = ENV['DISCORD_USER_ID']
+
+  discord_notifier(
+    webhook_url: webhook_url,
+    title: "ThinkoffChatTest",
+    description: "build ended",
+    discord_user_id: discord_user_id
+  )
 end
 
 desc "Call build_for_testing and test_without_building"

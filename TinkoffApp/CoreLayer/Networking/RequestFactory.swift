@@ -10,9 +10,9 @@ import Foundation
 struct RequestsFactory {
     
     struct ImageListRequest {
-        
+        static var apiKey = Bundle.main.object(forInfoDictionaryKey: "Images_Token") as? String ?? ""
         static func newImageListConfig() -> RequestConfig<CodableParser> {
-            return RequestConfig<CodableParser>(request: ImagesRequest(apiKey: "19151995-bbfacf4ace45de2b06c3a3dde"), parser: CodableParser())
+            return RequestConfig<CodableParser>(request: ImagesRequest(apiKey: apiKey), parser: CodableParser())
         }
     }
     
