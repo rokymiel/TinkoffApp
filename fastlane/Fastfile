@@ -1,0 +1,30 @@
+
+desc "Installs dependencies and builds with scan"
+lane :build_for_testing do
+  cocoapods
+  scan(
+    build_for_testing: true
+  )
+  webhook_url = ENV['DISCORD_WEBHOOK_URL']
+  discord_user_id = ENV['DISCORD_USER_ID']
+
+  discord_notifier(
+    webhook_url: webhook_url,
+    title: "ThinkoffChatTest",
+    description: "build ended",
+    discord_user_id: discord_user_id
+  )
+end
+
+desc "Runs tests on an already compiled application"
+lane :test_without_building do
+  scan(
+    test_without_building: true
+  )
+end
+
+desc "Call build_for_testing and test_without_building"
+lane :build_and_test do
+  build_for_testing
+  test_without_building
+end

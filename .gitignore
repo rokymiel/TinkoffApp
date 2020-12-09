@@ -131,4 +131,7 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+### Fastlane ###
+fastlane/.env
+
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,macos

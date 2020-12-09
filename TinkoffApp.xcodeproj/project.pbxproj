@@ -66,6 +66,7 @@
 		7DB00D7E252D8B1100DE922A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB00D7D252D8B1100DE922A /* ThemeManager.swift */; };
 		7DC493132577CF7900D361ED /* TinkoffAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC493122577CF7900D361ED /* TinkoffAppTests.swift */; };
 		7DC4931B2577CFB900D361ED /* ThemeSaverMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */; };
+		7DD69208258133EE00FC5D20 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69207258133EE00FC5D20 /* Config.xcconfig */; };
 		7DDCAC102551BE5800C2E0C2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */; };
 		7DDE19FB257932A50001209B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE19FA257932A50001209B /* Theme.swift */; };
 		7DDE19FF257967FF0001209B /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE19FE257967FF0001209B /* DataManagerMock.swift */; };
@@ -156,6 +157,7 @@
 		7DC493122577CF7900D361ED /* TinkoffAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffAppTests.swift; sourceTree = "<group>"; };
 		7DC493142577CF7900D361ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DC4931A2577CFB900D361ED /* ThemeSaverMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSaverMock.swift; sourceTree = "<group>"; };
+		7DD69207258133EE00FC5D20 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7DDCAC0F2551BE5800C2E0C2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7DDE19FA257932A50001209B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7DDE19FE257967FF0001209B /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		7D9BD54D251124FB00C7EFE8 = {
 			isa = PBXGroup;
 			children = (
+				7DD69207258133EE00FC5D20 /* Config.xcconfig */,
 				7D9BD558251124FB00C7EFE8 /* TinkoffApp */,
 				7DC493112577CF7900D361ED /* TinkoffAppTests */,
 				7D228A6E25785E750043E9C6 /* TinkoffAppUITests */,
@@ -662,6 +665,7 @@
 				7DA85207255C8B090067448A /* LaunchScreen.storyboard in Resources */,
 				7D19304B25234CB000227843 /* ConversationViewCell.xib in Resources */,
 				7D678F3E25641AE3003ABBAB /* ImagesView.storyboard in Resources */,
+				7DD69208258133EE00FC5D20 /* Config.xcconfig in Resources */,
 				7D755F01253F921A009282BD /* GoogleService-Info.plist in Resources */,
 				7DB00D79252D105400DE922A /* ThemesView.storyboard in Resources */,
 				7D1C9E9F2565607200362DD6 /* ImageCell.xib in Resources */,
@@ -874,6 +878,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TinkoffAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -892,6 +897,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TinkoffAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -907,6 +913,7 @@
 		};
 		7D9BD568251124FE00C7EFE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD69207258133EE00FC5D20 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -955,7 +962,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -967,6 +974,7 @@
 		};
 		7D9BD569251124FE00C7EFE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD69207258133EE00FC5D20 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1009,7 +1017,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1072,6 +1080,7 @@
 					"${SRCROOT}/Pods/Firebase/CoreOnly/Sources/**",
 				);
 				INFOPLIST_FILE = TinkoffAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1098,6 +1107,7 @@
 					"${SRCROOT}/Pods/Firebase/CoreOnly/Sources/**",
 				);
 				INFOPLIST_FILE = TinkoffAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

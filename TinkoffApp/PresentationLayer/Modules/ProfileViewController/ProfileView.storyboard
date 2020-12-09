@@ -100,6 +100,9 @@
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="profileDescriptionView"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRa-Zu-geB">
                                 <rect key="frame" x="67.666666666666686" y="373" width="240" height="29"/>
@@ -110,6 +113,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="profileUserNameField"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didEditUsername:" destination="xVl-Po-aso" eventType="editingDidEnd" id="hxx-xh-Xji"/>
                                 </connections>
